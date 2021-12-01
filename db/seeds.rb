@@ -8,12 +8,13 @@
 puts "delete all seed"
 
 Family.destroy_all
-puts "Destroy family"
+puts "Destroy familys"
 Course.destroy_all
-puts "Destroy course"
+puts "Destroy courses"
 User.destroy_all
-puts "Destroy User"
-
+puts "Destroy Users"
+Question.destroy_all
+puts "Destroy Questions"
 
 
 
@@ -67,4 +68,11 @@ nassim = User.create(email: "nassim@lewagon.fr", password: "azerty")
 nabila = User.create(email: "nabila@lewagon.fr", password: "azerty")
 thomas = User.create(email: "thomas@lewagon.fr", password: "azerty")
 puts "User done"
+
+
+Question.create(content:"Est-ce que pour poser du carrelage, il faut du carrelage ?", correct_answer: true, family: family)
+Question.create(content:"Est-ce que pour poser du parquet, il faut du parquet ?", correct_answer: true, family: family)
+Question.create(content:"Est-ce que pour peindre, il faut de la peinture ?", correct_answer: true, family: family)
+
+puts "Questions done"
 puts "Seed done"
