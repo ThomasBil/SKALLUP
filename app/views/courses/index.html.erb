@@ -1,0 +1,12 @@
+
+<% @courses.each do |course| %>
+  <%= course.title %>
+  <%= course.duration %>
+  <% if course.difficulty == "hard" %>
+    <%# Afficher trois marteau %>
+  <% elsif course.difficulty == "medium" %>
+    <%# Afficher deux marteaux %>
+  <% else %>
+    <%# Afficher un marteau %>
+  <% end %>
+<% end %>
