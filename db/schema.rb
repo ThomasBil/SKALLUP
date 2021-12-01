@@ -10,10 +10,57 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_30_132006) do
+ActiveRecord::Schema.define(version: 2021_11_30_134853) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "answers", force: :cascade do |t|
+    t.boolean "status"
+    t.boolean "user_answer"
+    t.bigint "question_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["question_id"], name: "index_answers_on_question_id"
+    t.index ["user_id"], name: "index_answers_on_user_id"
+  end
+
+  create_table "courses", force: :cascade do |t|
+    t.string "title"
+    t.string "difficulty"
+    t.integer "duration"
+    t.text "content"
+    t.bigint "family_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["family_id"], name: "index_courses_on_family_id"
+  end
+
+  create_table "families", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "progresses", force: :cascade do |t|
+    t.boolean "completed"
+    t.bigint "user_id", null: false
+    t.bigint "course_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["course_id"], name: "index_progresses_on_course_id"
+    t.index ["user_id"], name: "index_progresses_on_user_id"
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.string "content"
+    t.boolean "correct_answer"
+    t.bigint "family_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["family_id"], name: "index_questions_on_family_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,4 +74,10 @@ ActiveRecord::Schema.define(version: 2021_11_30_132006) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "answers", "questions"
+  add_foreign_key "answers", "users"
+  add_foreign_key "courses", "families"
+  add_foreign_key "progresses", "courses"
+  add_foreign_key "progresses", "users"
+  add_foreign_key "questions", "families"
 end
