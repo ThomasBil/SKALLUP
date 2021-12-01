@@ -1,12 +1,107 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+.navbar {
+  padding: 0px;
+
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.main-navbar {
+  background: rgb(123,136,243);
+  background: linear-gradient(162deg, rgba(123,136,243,1) 19%, rgba(72,71,117,1) 100%);
+  width: 100%;
+  box-shadow: 0px 12px 21px -4px rgba(84,84,84,0.52);
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.research-bar > h2 {
+  margin-top: 20px;
+  color: white;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+}
+
+.research-bar {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.skallup {
+  position: absolute;
+  left: 1272px;
+  position: absolute;
+  bottom: 75px;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.search-form-control {
+  position: relative;
+  margin-top: 20px;
+}
+
+.search-form-control .btn {
+  position: absolute;
+  top: 1px;
+  right: 400px;
+  background-color: white;
+}
+
+.search-form-control .form-control {
+  height: 40px;
+  width: 400px;
+  margin: auto;
+  border-radius: 7px;
+}
+
+.search-form-control .form-control:focus {
+  outline: none !important;
+}
+
+.navbar-link {
+  background-color: white;
+  border-radius: 10px;
+  width: 215px;
+  height: 350px;
+  border-radius: 10px;
+  position: absolute;
+  top: 40px;
+  left: 30px;
+  line-height: 40px;
+  box-shadow: 3px 8px 17px 3px rgba(151,151,151,0.63);
+}
+
+.navbar-link li {
+  margin-left: 10px;
+  list-style: none;
+}
+
+.user {
+  display: flex;
+}
+
+.user img {
+  border-radius: 50%;
+  width: 50px;
+  position: absolute;
+  top: 35px;
+  left: 20px;
+}
+
+.link-nav {
+  margin-top: 110px;
+}
+
+.username {
+  position: absolute;
+  top: 40px;
+  right: 50px;
+  color: #313055;
+  :hover {
+    color: #7B88F3;
+  }
+}
+
+.link-nav {
+  color: #313055;
+  :hover {
+      color: #7B88F3
+    ;
+  }
 }
