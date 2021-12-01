@@ -1,4 +1,12 @@
 <h1>Testez vous</h1>
 <% @quizzes.each do |quiz| %>
-<h3>Quizz : <%= quiz.name  %> </h3>
+  <div class="quizz-cards-index">
+    <div class="quizz-cards-content">
+      <h3>Quizz</h3>
+      <h2><%= quiz.name  %></h2>
+    </div>
+    <div class="start-button">
+      <p>DEMARRER</p>
+    </div>
+  </div>
 <% end %>
