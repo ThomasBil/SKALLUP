@@ -5,6 +5,7 @@ class CoursesController < ApplicationController
 
   def show
     @course = Course.find(params[:id])
-    @progress = Progress.new()
+    @user = current_user
+    @progress = Progress.find_by(course: @course, user: @user )
   end
 end
