@@ -1,29 +1,26 @@
-
-<div class = "container mt-5">
-  <div class="cards">
-    <% @courses.each do |course| %>
-        <div class = "card-product">
-          <img src="https://img-3.journaldesfemmes.fr/id3jfn4IcJMIccqqI0LdMQaRO8Q=/1500x/smart/676b698f910f4c0f98a8cc28aa78b6b4/ccmcms-jdf/14684085.jpg" />
-          <div class="card-product-infos">
-            <h2><%= course.title %></h2>
-            <ul class= "card-online">
-              <li>
-                <div class = "alignement m-3">
-                  <% if course.difficulty == "hard" %>
-                      <i class="fas fa-hammer"></i>  <i class="fas fa-hammer"></i> <i class="fas fa-hammer"></i>
-                  <% elsif course.difficulty == "medium" %>
-                      <i class="fas fa-hammer"></i> <i class="fas fa-hammer"></i>
-                  <% else %>
-                      <i class="fas fa-hammer"></i>
-                  <% end %>
-                  <p>Difficulté</p>
-                </div>
-              </li>
-              <li><p id="style"> <%= course.duration %> min </p> </li>
-            </ul>
-            <%= link_to 'DÉMARRER', course_path(course), class: "btn" %>
-          </div>
+<div class="cards">
+  <% @courses.each do |course| %>
+      <div class = "card-product">
+        <img src="https://img-3.journaldesfemmes.fr/id3jfn4IcJMIccqqI0LdMQaRO8Q=/1500x/smart/676b698f910f4c0f98a8cc28aa78b6b4/ccmcms-jdf/14684085.jpg" />
+        <div class="card-product-infos">
+          <h2><%= course.title %></h2>
+          <ul class= "card-online">
+            <li>
+              <div class = "alignement m-3">
+                <% if course.difficulty == "hard" %>
+                    <i class="fas fa-hammer"></i>  <i class="fas fa-hammer"></i> <i class="fas fa-hammer"></i>
+                <% elsif course.difficulty == "medium" %>
+                    <i class="fas fa-hammer"></i> <i class="fas fa-hammer"></i>
+                <% else %>
+                    <i class="fas fa-hammer"></i>
+                <% end %>
+                <p>Difficulté</p>
+              </div>
+            </li>
+            <li><p id="style"> <%= course.duration %> min </p> </li>
+          </ul>
+          <%= link_to 'DÉMARRER', course_path(course), class: "btn" %>
         </div>
-    <% end %>
-  </div>
+      </div>
+  <% end %>
 </div>
