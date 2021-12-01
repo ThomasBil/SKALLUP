@@ -1,0 +1,31 @@
+.last-lesson {
+  overflow: hidden;
+  height: 250px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.last-lesson img {
+  height: 100%;
+  width: 500px;
+  object-fit: cover;
+}
+
+.last-lesson h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+  position: relative;
+  bottom: 60px;
+}
+
+.last-lesson p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
