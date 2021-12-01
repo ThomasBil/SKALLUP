@@ -5,5 +5,6 @@ class CoursesController < ApplicationController
 
   def show
     @course = Course.find(params[:id])
+    @progress = Progress.new()
   end
 end

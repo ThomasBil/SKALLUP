@@ -1,3 +1,6 @@
-<h1><%= @course.title %></h1>
-<%# video %>
-<p><%= @course.content %></p>
+<div class="container">
+  <h1><%= @course.title %></h1>
+  <%# video %>
+  <p><%= @course.content %></p>
+  <%= link_to "J'ai terminé ce chapitre", course_progresses_path(@course), method: :post %>
+</div>
