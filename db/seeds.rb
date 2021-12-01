@@ -11,6 +11,10 @@ Family.destroy_all
 puts "Destroy family"
 Course.destroy_all
 puts "Destroy course"
+User.destroy_all
+puts "Destroy User"
+
+
 
 
 
@@ -58,3 +62,9 @@ Course.create(
     A l'issue de ce cours, vous serez capable de choisir votre carrelage et le mortier colle adapté, préparer le sol avant la pose, découper, poser et coller vos carreaux de carrelage avant de faire les joints.",
 family: family2)
 puts "Course done"
+
+nassim = User.create(email: "nassim@lewagon.fr", password: "azerty")
+nabila = User.create(email: "nabila@lewagon.fr", password: "azerty")
+thomas = User.create(email: "thomas@lewagon.fr", password: "azerty")
+puts "User done"
+puts "Seed done"
