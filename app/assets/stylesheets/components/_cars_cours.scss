@@ -20,7 +20,7 @@
 }
 
 .card-online .aligement{
-  display: inline;
+  display: block;
 }
 .card-online{
   position: relative;
@@ -43,7 +43,7 @@
 }
 
 .card-online p {
-  font-size: 24px;
+  font-size: 32px;
   line-height: 1.4;
   margin-bottom: 0;
   margin-top: 8px;
@@ -55,7 +55,7 @@
 }
 .btn{
   position: absolute;
-  right: 200px;
+  right: 100px;
   background-color: #374BDD;
   color: white;
   padding: 10px 50px;
