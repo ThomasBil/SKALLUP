@@ -1,6 +1,8 @@
-<div class="container">
+<div class = "style">
   <h1><%= @course.title %></h1>
-  <%# video %>
+  <div class = "video">
+    <iframe width="100%" height="615" src="https://www.youtube.com/embed/SDEZM7q1yj4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
   <p><%= @course.content %></p>
   <% if @progress.nil? %>
     <%= link_to "J'ai terminé ce chapitre", course_progresses_path(@course), method: :post %>
