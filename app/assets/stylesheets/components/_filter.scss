@@ -1,0 +1,63 @@
+.filter {
+  margin-bottom: 100px;
+}
+
+.filtrer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+  grid-auto-rows: minmax(47px, auto);
+  margin: 30px 0px;
+}
+
+
+.filtrer-vos-cours {
+  font-family: "Work Sans", "Helvetica", "sans-serif";
+  font-size: 17px;
+}
+
+
+.difficulties {
+  display: flex;
+}
+
+.dropdown-filter {
+  margin-right: 80px;
+}
+
+#dropdownMenuButton {
+  margin: 0px 20px;
+  background: rgb(57,75,221);
+  background: linear-gradient(180deg, rgba(57,75,221,1) 0%, rgba(121,110,226,1) 100%);
+  border-radius: 4px;
+  padding: 10px 45px;
+  font-size: 16px;
+}
+
+.btn-filtre {
+  background-color: none;
+  color: #3C4EDE;
+  border-radius: 4px;
+  font-family: "Work Sans", "Helvetica", "sans-serif";
+  font-size: 20px;
+  padding: 5px;
+
+  &:hover {
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 4px;
+    background: rgb(57,75,221);
+    background: linear-gradient(180deg, rgba(57,75,221,1) 0%, rgba(121,110,226,1) 100%);
+  }
+}
+
+h3.btn-filtre {
+  text-align: center;
+}
+
+.filtre-text {
+  font-family: "Work Sans", "Helvetica", "sans-serif";
+  font-size: 20px;
+  padding: 5px;
+}
