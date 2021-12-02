@@ -12,14 +12,23 @@ class AnswersController < ApplicationController
     @answer.save!
     @quizz = @question.family
     @quizz_questions = @quizz.questions
+    @un_answers_questions = []
+    @bad_answers = []
+
     @quizz_questions.each do |quizz_question|
-      @next_question = quizz_question
-      break if quizz_question.answers.empty?
+      if quizz_question.answers.empty?
+        @un_answers_questions << quizz_question
+      elsif quizz_question.answers[0].status == false
+        @bad_answers << quizz_question
+      end
     end
-    if @quizz_questions.last == @question
-      redirect_to quizzes_path
+
+    if !@un_answers_questions.empty?
+      redirect_to question_path(@un_answers_questions.sample)
+    elsif !@bad_answers.empty?
+      redirect_to question_path(@bad_answers.sample)
     else
-      redirect_to question_path(@next_question)
+      redirect_to quizzes_path
     end
   end
 
@@ -34,6 +43,26 @@ class AnswersController < ApplicationController
       @answer.status = false
     end
     @answer.save!
+    @quizz = @question.family
+    @quizz_questions = @quizz.questions
+    @un_answers_questions = []
+    @bad_answers = []
+
+    @quizz_questions.each do |quizz_question|
+      if quizz_question.answers.empty?
+        @un_answers_questions << quizz_question
+      elsif quizz_question.answers[0].status == false
+        @bad_answers << quizz_question
+      end
+    end
+
+    if !@un_answers_questions.empty?
+      redirect_to question_path(@un_answers_questions.sample)
+    elsif !@bad_answers.empty?
+      redirect_to question_path(@bad_answers.sample)
+    else
+      redirect_to quizzes_path
+    end
   end
 
   private
@@ -42,8 +71,3 @@ class AnswersController < ApplicationController
     params.require(:answer).permit(:user_answer)
   end
 end
-
-
-
-
-# offers = Offer.where("income > :value", {value: 3})
