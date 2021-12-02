@@ -14,27 +14,26 @@
     </div>
   </div>
 
-  <div class="navbar-link">
 
-    <% if current_user.nil? %>
-      <%= link_to "LOGIN", new_user_session_path %>
-    <% else %>
-      <div class="user">
-        <img src="https://avatars.githubusercontent.com/u/90854439?v=4" alt="photo">
-        <p class="username"><%= current_user.username %></p>
-      </div>
-    <% end %>
-    <ul class="link">
-      <div class="link-nav">
-        <li><%= link_to "Mes cours", courses_path %></li>
-        <li>Mes fiches</li>
-        <li><%= link_to "Quizz", quizzes_path %></li>
-        <% if !current_user.nil? %>
-          <li><%= link_to "LOG-OUT", destroy_user_session_path, method: :delete %></li>
-        <% end %>
-        <li>Besoin d'aide ?</li>
-      </div>
-    </ul>
-  </div>
-
+  <% if current_user.nil? %>
+    <div class="nav-unroll">
+      <%= link_to "LOGIN", new_user_session_path, class: "link-nav-unroll" %>
+    </div>
+  <% else %>
+    <div class="navbar-link">
+        <div class="user">
+          <img src="https://avatars.githubusercontent.com/u/90854439?v=4" alt="photo">
+          <p class="username"><%= current_user.username %></p>
+        </div>
+      <ul class="link">
+        <div class="link-nav">
+          <li><%= link_to "Mes cours", courses_path %></li>
+          <li>Mes fiches</li>
+          <li><%= link_to "Quizz", quizzes_path %></li>
+          <li id="last-li">Besoin d'aide ?</li>
+          <%= link_to "LOG-OUT", destroy_user_session_path, method: :delete, class: "logout-link-nav"%>
+        </div>
+      </ul>
+    </div>
+  <% end %>
 </div>
