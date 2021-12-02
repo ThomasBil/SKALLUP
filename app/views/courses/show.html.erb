@@ -7,4 +7,18 @@
   <% if @progress.nil? %>
     <%= link_to "J'ai terminé ce chapitre", course_progresses_path(@course), method: :post %>
   <% end %>
+
+
+
+  <% if @next_course.nil? %>
+    <%= link_to "Faire le quizz", quizzes_path %>
+  <% else %>
+    <%= link_to "Passer au cours suivant", course_path(@next_course) %>
+  <% end %>
+
+  <% if @prev_course.nil? %>
+    <%= link_to "Retour aux menus", courses_path %>
+  <% else %>
+    <%= link_to "Revenir au cours précédent", course_path(@prev_course) %>
+  <% end %>
 </div>
