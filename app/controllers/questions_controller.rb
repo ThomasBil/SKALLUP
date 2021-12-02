@@ -3,9 +3,9 @@ class QuestionsController < ApplicationController
     @question = Question.find(params[:id])
   end
 
-  def create
-  end
+  private
 
-  def update
+  def question_params
+    params.require(:answer).permit(:user_answer, :question_id)
   end
 end
