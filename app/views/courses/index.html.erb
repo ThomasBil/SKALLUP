@@ -1,3 +1,61 @@
+<div class="filter">
+
+  <div class="filtre-text">
+  Les cours sur le
+    <button class="btn btn-secondary dropdown-toggle filter" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+      Choisissez un rayon
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#">Carrelage</a>
+      <a class="dropdown-item" href="#">Parquet</a>
+      <a class="dropdown-item" href="#">Sol souple</a>
+    </div>
+  </div>
+
+  <div class="filtrer">
+    <h2 class="filtre-text">Filtrer vos cours</h2>
+    <h3 class="btn-filtre" id="tous">Tous</h3>
+    <h3 class="btn-filtre" id="en-cours">En cours </h3>
+    <h3 class="btn-filtre" id="termines">Terminés</h3>
+  </div>
+
+  <div class="difficulties">
+
+    <div>
+      <div class="dropdown-filter">
+      <span class="filtre-text">Votre niveau</span>
+        <button class="btn btn-secondary dropdown-toggle filter" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+          Tous
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Débutant</a>
+          <a class="dropdown-item" href="#">Intermédiaire</a>
+          <a class="dropdown-item" href="#">Difficile</a>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="dropdown-filter">
+      <span class="filtre-text">Choisissez votre durée</span>
+        <button class="btn btn-secondary dropdown-toggle filter" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+          Tous
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">15 min</a>
+          <a class="dropdown-item" href="#">30 min</a>
+          <a class="dropdown-item" href="#">45 min</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
 <div class="cards">
   <% @courses.each do |course| %>
       <div class = "card-product">
@@ -19,7 +77,7 @@
             </li>
             <li><p id="style"> <%= course.duration %> min </p> </li>
           </ul>
-          <%= link_to 'DÉMARRER', course_path(course), class: "btn" %>
+          <%= link_to 'DÉMARRER', course_path(course), class: "btn-cours" %>
         </div>
       </div>
   <% end %>

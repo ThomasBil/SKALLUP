@@ -11,6 +11,7 @@
   align-items: center;
   margin: 70px 0;
   border-radius: 10px;
+  position: relative;
 }
 
 .card-product img {
@@ -53,9 +54,10 @@
 .card-product .card-product-infos {
   padding: 16px;
 }
-.btn{
+
+.btn-cours{
   position: absolute;
-  right: 100px;
+  right: 55px;
   background-color: #374BDD;
   color: white;
   padding: 10px 50px;
