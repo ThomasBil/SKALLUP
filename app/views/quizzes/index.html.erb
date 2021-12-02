@@ -1,12 +1,21 @@
 <h1>Testez vous</h1>
 <% @quizzes.each do |quiz| %>
   <div class="quizz-cards-index">
-    <div class="quizz-cards-content">
-      <h3>Quizz</h3>
-      <h2><%= quiz.name  %></h2>
-    </div>
-    <div class="start-button">
-      <p>DEMARRER</p>
-    </div>
+
+<div class="progress">
+  <div class="progress-content">
+    <div class="progress-value"></div>
+  </div>
+  <p>80%</p>
+</div>
+
+
+  <div class="quizz-cards-content">
+    <h3>Quizz</h3>
+    <h2><%= quiz.name  %></h2>
+  </div>
+  <div class="start-button">
+    <p>DEMARRER</p>
+  </div>
   </div>
 <% end %>
