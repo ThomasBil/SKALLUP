@@ -73,6 +73,7 @@ puts "User done"
 Question.create(content:"Est-ce que pour poser du carrelage, il faut du carrelage ?", correct_answer: true, family: family)
 Question.create(content:"Est-ce que pour poser du parquet, il faut du parquet ?", correct_answer: true, family: family)
 Question.create(content:"Est-ce que pour peindre, il faut de la peinture ?", correct_answer: true, family: family)
+Question.create(content:"Est-ce que pour peindre, il faut de la peintuuuuuuure ?", correct_answer: true, family: family2)
 
 puts "Questions done"
 puts "Seed done"
