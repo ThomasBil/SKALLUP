@@ -10,7 +10,12 @@
   <div class="question-answer">
     <p class="button-filter">VRAI</p>
     <p class="button-filter">FAUX</p>
-    <%# <%= link_to "VRAI", question_answers_path(@question, user_answer: true), method: :post %>
-    <%# <%= link_to "FAUX", question_answers_path(@question, user_answer: false), method: :post %>
+    <% if @status == true %>
+      <%= link_to "VRAI", question_answer_path(@question, @user_answer, answer: {user_answer: true}), method: :patch %>
+      <%= link_to "FAUX", question_answer_path(@question, @user_answer, answer: {user_answer: false}), method: :patch %>
+    <% else %>
+      <%= link_to "VRAI", question_answers_path(@question, answer: {user_answer: true}), method: :post %>
+      <%= link_to "FAUX", question_answers_path(@question, answer: {user_answer: false}), method: :post %>
+    <% end %>
   </div>
 </div>
