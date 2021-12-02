@@ -37,7 +37,7 @@
   font-size: 36px;
 }
 .card-product-infos h2 {
-  font-size: 36px;
+  font-size: 32px;
   font-weight: bold;
   margin-top: 29px
 }
@@ -64,4 +64,22 @@
 }
 #style {
   margin-top: 63px;
+}
+
+@media (min-width: 768px) {
+    .my-custom-container{
+        width:600px;
+    }
+}
+
+@media (min-width: 992px) {
+    .my-custom-container{
+        width:720px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .my-custom-container{
+        width:900px;
+    }
 }
