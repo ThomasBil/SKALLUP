@@ -83,25 +83,25 @@
 
 .user {
   display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 5px;
+  align-items: center;
+  margin-top: 15px;
 }
 
 .user img {
   border-radius: 50%;
   width: 50px;
-  position: absolute;
-  top: 35px;
-  left: 20px;
 }
 
 .link-nav {
-  margin-top: 110px;
+  margin-top: 30px;
 }
 
 .username {
-  position: absolute;
-  top: 40px;
-  right: 50px;
   color: #313055;
+  margin: 0;
   :hover {
     color: #7B88F3;
   }

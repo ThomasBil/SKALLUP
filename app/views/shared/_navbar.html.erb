@@ -15,16 +15,23 @@
   </div>
 
   <div class="navbar-link">
-    <ul class="link">
+
+    <% if current_user.nil? %>
+      <%= link_to "LOGIN", new_user_session_path %>
+    <% else %>
       <div class="user">
-        <li><img src="https://avatars.githubusercontent.com/u/90854439?v=4" alt="photo"></li>
-        <li class="username" >username</li>
+        <img src="https://avatars.githubusercontent.com/u/90854439?v=4" alt="photo">
+        <p class="username"><%= current_user.username %></p>
       </div>
+    <% end %>
+    <ul class="link">
       <div class="link-nav">
         <li><%= link_to "Mes cours", courses_path %></li>
         <li>Mes fiches</li>
         <li><%= link_to "Quizz", quizzes_path %></li>
-        <li>Mes diplômes</li>
+        <% if !current_user.nil? %>
+          <li><%= link_to "LOG-OUT", destroy_user_session_path, method: :delete %></li>
+        <% end %>
         <li>Besoin d'aide ?</li>
       </div>
     </ul>

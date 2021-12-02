@@ -64,9 +64,9 @@ Course.create(
 family: family2)
 puts "Course done"
 
-nassim = User.create(email: "nassim@lewagon.fr", password: "azerty")
-nabila = User.create(email: "nabila@lewagon.fr", password: "azerty")
-thomas = User.create(email: "thomas@lewagon.fr", password: "azerty")
+nassim = User.create(email: "nassim@lewagon.fr", password: "azerty", username: "NassimCastor")
+nabila = User.create(email: "nabila@lewagon.fr", password: "azerty", username: "NabilaPasCastor")
+thomas = User.create(email: "thomas@lewagon.fr", password: "azerty", username: "ThomasPasCastor")
 puts "User done"
 
 
