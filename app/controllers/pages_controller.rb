@@ -5,9 +5,14 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-    @quizzes = Family.all.count
-    @courses = Course.all.count
-    @perfect = @courses + @quizzes
-    @courses_done = current_user.progresses.count
+    @user = current_user
+    @courses_done = @user.progresses
+    @quizzes = Family.all
+    @quizzes.each do |
+    @quizzes_done =
+    raise
+    @courses = Course.all
+    @perfect = @courses.count + @quizzes.count
+
   end
 end
