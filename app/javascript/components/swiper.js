@@ -1,8 +1,8 @@
 import Swiper, { Navigation } from 'swiper'
 
-import 'swiper/swiper.min.css';
 import 'swiper/swiper.scss';
-import 'swiper/modules/navigation/navigation.min.css';
+import 'swiper/components/navigation/navigation.min.css';
+
 
 
 const initSwiper = () => {
