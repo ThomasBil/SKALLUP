@@ -1,3 +1,10 @@
+<div class="button-back">
+  <%= link_to "RETOUR AUX QUIZZ", quizzes_path %>
+</div>
+
+
+
+
 <div class="question-cards">
   <div class="progress">
     <div class="progress-content">
@@ -8,14 +15,14 @@
   <h2>Vrai ou Faux ?</h2>
   <h1><%= @question.content %></h1>
   <div class="question-answer">
-    <p class="button-filter">VRAI</p>
-    <p class="button-filter">FAUX</p>
+    <%# <p class="button-filter">VRAI</p>
+    <p class="button-filter">FAUX</p> %>
     <% if @status == true %>
-      <%= link_to "VRAI", question_answer_path(@question, @user_answer, answer: {user_answer: true}), method: :patch %>
-      <%= link_to "FAUX", question_answer_path(@question, @user_answer, answer: {user_answer: false}), method: :patch %>
+      <%= link_to "VRAI", question_answer_path(@question, @user_answer, answer: {user_answer: true}), method: :patch, class: "button-filter" %>
+      <%= link_to "FAUX", question_answer_path(@question, @user_answer, answer: {user_answer: false}), method: :patch, class: "button-filter" %>
     <% else %>
-      <%= link_to "VRAI", question_answers_path(@question, answer: {user_answer: true}), method: :post %>
-      <%= link_to "FAUX", question_answers_path(@question, answer: {user_answer: false}), method: :post %>
+      <%= link_to "VRAI", question_answers_path(@question, answer: {user_answer: true}), method: :post, class: "button-filter" %>
+      <%= link_to "FAUX", question_answers_path(@question, answer: {user_answer: false}), method: :post, class: "button-filter" %>
     <% end %>
   </div>
 </div>

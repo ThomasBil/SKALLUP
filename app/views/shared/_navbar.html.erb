@@ -3,7 +3,7 @@
   <div class="main-navbar">
     <div class="research-bar">
       <h2 class="skallup"><%= link_to "SKALLUP", dashboard_path %></h2>
-      <h2>Welcome Thomas !</h2>
+      <h2>WELCOME Thomas !</h2>
       <div class="search-bar">
         <form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
           <div class="search-form-control form-group">
@@ -14,20 +14,26 @@
     </div>
   </div>
 
-  <div class="navbar-link">
-    <ul class="link">
-      <div class="user">
-        <li><img src="https://avatars.githubusercontent.com/u/90854439?v=4" alt="photo"></li>
-        <li class="username" >username</li>
-      </div>
-      <div class="link-nav">
-        <li><%= link_to "Mes cours", courses_path %></li>
-        <li>Mes fiches</li>
-        <li><%= link_to "Quizz", quizzes_path %></li>
-        <li>Mes diplômes</li>
-        <li>Besoin d'aide ?</li>
-      </div>
-    </ul>
-  </div>
 
+  <% if current_user.nil? %>
+    <div class="nav-unroll">
+      <%= link_to "LOGIN", new_user_session_path, class: "link-nav-unroll" %>
+    </div>
+  <% else %>
+    <div class="navbar-link">
+        <div class="user">
+          <img src="https://avatars.githubusercontent.com/u/90854439?v=4" alt="photo">
+          <p class="username"><%= current_user.username %></p>
+        </div>
+      <ul class="link">
+        <div class="link-nav">
+          <li><%= link_to "Dashboard", dashboard_path %></li>
+          <li><%= link_to "Mes cours", courses_path %></li>
+          <li><%= link_to "Quizz", quizzes_path %></li>
+          <li id="last-li">Besoin d'aide ?</li>
+          <%= link_to "LOG-OUT", destroy_user_session_path, method: :delete, class: "logout-link-nav"%>
+        </div>
+      </ul>
+    </div>
+  <% end %>
 </div>
