@@ -42,3 +42,44 @@
   0% { width: 0; }
   100% { width: 80%; }
 }
+
+
+
+.progress2 {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+
+.progress-content2 {
+  background: rgb(255,255,255);
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: relative;
+  display: flex;
+  height: 40px;
+  width: 80%;
+  border: 2px solid lightgray;
+}
+
+
+
+.progress-value2 {
+  animation: load 1.5s normal forwards;
+  box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 100px;
+  background: #6fd866;
+  height: 100%;
+  width: 0;
+}
+
+@keyframes load {
+  0% { width: 0; }
+  100% { width: 80%; }
+}
