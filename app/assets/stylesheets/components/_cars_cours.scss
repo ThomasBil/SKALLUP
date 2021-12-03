@@ -4,19 +4,20 @@
 
 .card-product {
   overflow: hidden;
-  height: 250px;
+  width: 80%;
+  height: 270px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  margin: 70px 0;
+  margin: 70px 0px 70px 50px;
   border-radius: 10px;
   position: relative;
 }
 
+
 .card-product img {
   height: 100%;
-  width: 350px;
+  width: 290px;
   object-fit: cover;
 }
 
@@ -34,11 +35,12 @@
   }
 }
 
+
 .card-online i {
   font-size: 36px;
 }
 .card-product-infos h2 {
-  font-size: 32px;
+  font-size: 25px;
   margin-top: 29px;
   font-family: "Work Sans", "Helvetica", "sans-serif";
 }
@@ -57,11 +59,13 @@
   padding: 16px;
 }
 
+
+
 .btn-cours{
   position: absolute;
-  right: 55px;
+  right: 17px;
   color: white;
-  padding: 10px 50px;
+  padding: 10px 42px;
   border-radius: 8px;
   margin-top: -80px;
   background: rgb(121,109,226);
@@ -74,6 +78,14 @@
   }
 }
 
+
+.active {
+  color: black;
+}
+
+.inactive {
+  color: whitesmoke;
+}
 
 #style {
   margin-top: 63px;
