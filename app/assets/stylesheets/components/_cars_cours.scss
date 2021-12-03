@@ -39,15 +39,17 @@
 }
 .card-product-infos h2 {
   font-size: 32px;
-  font-weight: bold;
-  margin-top: 29px
+  margin-top: 29px;
+  font-family: "Work Sans", "Helvetica", "sans-serif";
 }
 
 .card-online p {
-  font-size: 32px;
+  font-family: "Work Sans", "Helvetica", "sans-serif";
+  font-size: 20px;
   line-height: 1.4;
   margin-bottom: 0;
   margin-top: 8px;
+  margin-left: 17px;
   color: #374BDD;
 }
 
@@ -58,14 +60,24 @@
 .btn-cours{
   position: absolute;
   right: 55px;
-  background-color: #374BDD;
   color: white;
   padding: 10px 50px;
   border-radius: 8px;
   margin-top: -80px;
+  background: rgb(121,109,226);
+  background: linear-gradient(90deg, rgba(121,109,226,1) 0%, rgba(55,75,221,1) 100%);
+  &:hover {
+    text-decoration: none;
+    color: white;
+    background: rgb(121,109,226);
+    background: linear-gradient(90deg, rgb(79, 71, 145) 0%, rgb(31, 42, 128) 100%);
+  }
 }
+
+
 #style {
   margin-top: 63px;
+  font-family: "Work Sans", "Helvetica", "sans-serif";
 }
 
 @media (min-width: 768px) {
