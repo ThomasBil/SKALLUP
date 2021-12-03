@@ -27,8 +27,8 @@
         </div>
       <ul class="link">
         <div class="link-nav">
+          <li><%= link_to "Dashboard", dashboard_path %></li>
           <li><%= link_to "Mes cours", courses_path %></li>
-          <li>Mes fiches</li>
           <li><%= link_to "Quizz", quizzes_path %></li>
           <li id="last-li">Besoin d'aide ?</li>
           <%= link_to "LOG-OUT", destroy_user_session_path, method: :delete, class: "logout-link-nav"%>
