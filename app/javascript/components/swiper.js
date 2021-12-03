@@ -1,7 +1,10 @@
 import Swiper, { Navigation } from 'swiper'
 
-import 'swiper/swiper.scss';
+// import 'swiper/swiper.scss';
 import 'swiper/modules/navigation/navigation.min.css';
+// import 'swiper/scss'
+// import 'swiper/scss/bundle'
+import 'swiper/swiper-bundle.css'
 
 
 
