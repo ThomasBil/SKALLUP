@@ -2,7 +2,10 @@ import Swiper, { Navigation, FreeMode, Pagination } from 'swiper'
 
 import 'swiper/swiper.scss';
 import 'swiper/swiper.min.css';
+
+
 import 'swiper/modules/navigation/navigation.min.css';
+import 'swiper/components/navigation/navigation.min.css';
 import 'swiper/modules/free-mode/free-mode.min.css';
 
 
