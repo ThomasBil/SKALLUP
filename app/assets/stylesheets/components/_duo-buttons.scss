@@ -1,0 +1,48 @@
+.button-finish {
+  background-color: #3546DE;
+  width: fit-content;
+  padding: 15px 250px;
+  margin: 20px auto;
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    &:hover {
+      color: #737ee0;
+    }
+  }
+}
+
+
+.duo-buttons {
+  margin-top: 40px;
+  padding: 0 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.button-next-finish {
+  background-color: #3546DE;
+  width: fit-content;
+  padding: 15px 50px;
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    &:hover {
+      color: #737ee0;
+    }
+  }
+}
+
+.fas.fa-chevron-right {
+  color: white;
+  margin-left: 20px;
+  font-size: 20px;
+}
+.fas.fa-chevron-left {
+  color: white;
+  margin-right: 20px;
+  font-size: 20px;
+}

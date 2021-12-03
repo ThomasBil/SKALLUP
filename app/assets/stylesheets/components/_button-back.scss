@@ -1,0 +1,14 @@
+.button-back {
+  padding: 5px 30px;
+  background: rgb(55,75,221);
+  background: linear-gradient(180deg, rgba(55,75,221,1) 0%, rgba(122,110,226,1) 100%);
+  border-radius: 9px;
+  width: fit-content;
+  a {
+    color: white;
+    text-decoration: none;
+    &:hover {
+      color: #0c1fec;
+    }
+  }
+}

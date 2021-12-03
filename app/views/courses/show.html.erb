@@ -4,21 +4,28 @@
     <iframe width="100%" height="615" src="https://www.youtube.com/embed/SDEZM7q1yj4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
   <p><%= @course.content %></p>
+
   <% if @progress.nil? %>
-    <%= link_to "J'ai terminé ce chapitre", course_progresses_path(@course), method: :post %>
+    <div class="button-finish">
+      <%= link_to "J'AI TERMINÉ CE CHAPITRE", course_progresses_path(@course), method: :post %>
+    </div>    
   <% end %>
 
+  <div class="duo-buttons">
 
-
-  <% if @next_course.nil? %>
-    <%= link_to "Faire le quizz", quizzes_path %>
-  <% else %>
-    <%= link_to "Passer au cours suivant", course_path(@next_course) %>
-  <% end %>
-
-  <% if @prev_course.nil? %>
-    <%= link_to "Retour aux menus", courses_path %>
-  <% else %>
-    <%= link_to "Revenir au cours précédent", course_path(@prev_course) %>
-  <% end %>
+    <div class="button-next-finish">
+      <% if @prev_course.nil? %>
+        <i class="fas fa-chevron-left"></i><%= link_to "Retour aux menus", courses_path %>
+      <% else %>
+        <i class="fas fa-chevron-left"></i><%= link_to "Revenir au cours précédent", course_path(@prev_course) %>
+      <% end %>
+    </div>
+    <div class="button-next-finish">
+      <% if @next_course.nil? %>
+        <%= link_to "Faire le quizz", quizzes_path %><i class="fas fa-chevron-right"></i>
+      <% else %>
+        <%= link_to "Passer au cours suivant", course_path(@next_course) %><i class="fas fa-chevron-right"></i>
+      <% end %>
+    </div>
+  </div>
 </div>
