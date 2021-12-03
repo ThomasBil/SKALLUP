@@ -1,11 +1,14 @@
 import Swiper, { Navigation } from 'swiper'
 
 import 'swiper/swiper.min.css';
+import 'swiper/swiper.scss';
+
 import 'swiper/modules/navigation/navigation.min.css';
 
 
 const initSwiper = () => {
   if (document.querySelector(".mySwiper")) {
+    console.log("initSwiper")
     Swiper.use([Navigation]);
     const swiper = new Swiper(".mySwiper", {
       slidesPerView: 3,
