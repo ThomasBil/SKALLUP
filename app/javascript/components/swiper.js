@@ -1,6 +1,6 @@
 import Swiper, { Navigation } from 'swiper'
 
-import 'swiper/swiper.scss';
+import 'swiper/swiper.min.css';
 import 'swiper/modules/navigation/navigation.min.css';
 
 
