@@ -14,7 +14,11 @@ const initSwiper = () => {
       spaceBetween: 30,
       slidesPerGroup: 3,
       loop: true,
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
       loopFillGroupWithBlank: true,
+      observer: true,
+      observeParents: true,
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
