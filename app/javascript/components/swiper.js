@@ -1,17 +1,10 @@
 import Swiper, { Navigation } from 'swiper'
 
-// import 'swiper/swiper.min.css';
-// import 'swiper/swiper.scss';
-// import 'swiper/modules/navigation/navigation.min.css';
+import 'swiper/swiper.min.css';
+import 'swiper/swiper.scss';
 
-import 'swiper/css/bundle'
+import 'swiper/modules/navigation/navigation.min.css';
 
-// swiper core styles
-import 'swiper/css'
-
-// modules styles
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
 
 const initSwiper = () => {
   if (document.querySelector(".mySwiper")) {
