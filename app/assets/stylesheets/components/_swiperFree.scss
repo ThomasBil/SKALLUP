@@ -13,11 +13,16 @@
 }
 
 .swiper-banner {
-  background-color: red;
+  background-color: #707ad7;
   width: 70%;
   padding: 25px;
   margin: 25px;
   border-radius: 10px;
+  display: flex;
+  h2 {
+    color: white;
+    margin: 0;
+  }
 }
 
 
