@@ -2,16 +2,24 @@
   <%= link_to "RETOUR AUX QUIZZ", quizzes_path %>
 </div>
 
+<div class="progress-container">
+  <h2>You have mastered <%= @good_answers.count %> of <%= @quizz_questions.count %> questions of that quizz</h2>
+  <div class="progress-bar-full">
+    <div class="master-progress" style="width: 0%"></div>
+    <div class="not-master-progress" style="width: 0%"></div>
+  </div>
+</div>
+
 
 
 
 <div class="question-cards">
-  <div class="progress">
+  <%# <div class="progress">
     <div class="progress-content">
       <div class="progress-value"></div>
     </div>
     <p>80%</p>
-  </div>
+  </div> %>
   <h2>Vrai ou Faux ?</h2>
   <h1><%= @question.content %></h1>
   <div class="question-answer">
@@ -26,3 +34,11 @@
     <% end %>
   </div>
 </div>
+
+
+
+<script>
+  const all_questions = <%= @quizz_questions.count %>
+  const good_questions = <%= @good_answers.count %>
+  const bad_questions = <%= @bad_answers.count %>
+</script>

@@ -28,7 +28,7 @@ class AnswersController < ApplicationController
     elsif !@bad_answers.empty?
       redirect_to question_path(@bad_answers.sample)
     else
-      redirect_to quizzes_path
+      redirect_to question_path(@quizz_questions.sample)
     end
   end
 
@@ -61,7 +61,7 @@ class AnswersController < ApplicationController
     elsif !@bad_answers.empty?
       redirect_to question_path(@bad_answers.sample)
     else
-      redirect_to quizzes_path
+      redirect_to question_path(@quizz_questions.sample)
     end
   end
 
