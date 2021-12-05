@@ -46,7 +46,7 @@
 
 .skallup {
   position: absolute;
-  left: 34px;
+  left: 40px;
   top: 28px;
   font-family: "Work Sans", "Helvetica", "sans-serif";
   &:hover {
@@ -177,13 +177,14 @@
 
 .logout-link-nav {
   margin-top: 5px;
-  background-color: #4049F4;
+  background-color: #486AEA;
   padding: 15px 35px;
   border-radius: 10px;
   color: white;
   text-decoration: none;
   &:hover {
     text-decoration: none;
+    color: #7B88F3;
   }
 }
 
