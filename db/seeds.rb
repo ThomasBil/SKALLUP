@@ -93,8 +93,6 @@ family: family2)
   course.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
   course.save!
 
-
-
 puts "Course done"
 
 nassim = User.create(email: "nassim@lewagon.fr", password: "azerty", username: "NassimCastor")
