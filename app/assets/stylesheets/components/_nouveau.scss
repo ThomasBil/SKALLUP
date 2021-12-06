@@ -39,9 +39,11 @@
   padding: 10px 70px;
   color: #4050DB;
   background: rgb(253, 253, 253);
-   &:hover {
-     background-color: rgb(129, 131, 143);
+  &:hover {
+    background-color: rgb(129, 131, 143);
+    color: white;
+  }
+   a:hover {
      text-decoration: none;
-     color: white;
    }
 }

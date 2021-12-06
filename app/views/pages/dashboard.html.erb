@@ -47,75 +47,30 @@
 
 <div class="swiper mySwiper" style= "height: 500px;">
   <div class="swiper-wrapper">
+  <% @quizzes.each do |family| %>
     <div class="swiper-slide">
       <img src="https://images.unsplash.com/photo-1623043453741-11aef9cb59b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZG8lMjBpdCUyMHlvdXJzZWxmfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
       <div class="contenu-slide-swiper">
-        <h2>Monter un meuble</h2>
-        <div class="progress2">
-          <div class="progress-content2">
-            <div class="progress-value2"></div>
+        <h2><%= family.name %></h2>
+        <% @family_courses = family.courses %>
+          <% @done_course = [] %>
+          <% @family_courses.each do |family_course| %>
+            <% if family_course.progresses.empty? %>
+            <% elsif family_course.progresses[0].completed == true %>
+              <% @done_course << family_course %>
+            <% end %>
+          <% end %>
+        <div class="progress-container-quizz">
+          <div class="progress-bar-full" style ="width: 75%; margin-top: 50px">
+            <div class="master-progress" style="width: 0%", data-good="<%= @done_course.count %>", data-all="<%= @family_courses.count %>" ></div>
           </div>
         </div>
       </div>
     </div>
-    <div class="swiper-slide">
-      <img src="https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" alt="">
-      <div class="contenu-slide-swiper">
-        <h2>Électricité</h2>
-        <div class="progress2">
-          <div class="progress-content2">
-            <div class="progress-value2"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="swiper-slide">
-      <img src="https://images.unsplash.com/photo-1505798577917-a65157d3320a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZGl5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
-      <div class="contenu-slide-swiper">
-        <h2>Le parquet</h2>
-        <div class="progress2">
-          <div class="progress-content2">
-            <div class="progress-value2"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="swiper-slide">
-      <img src="https://images.unsplash.com/photo-1452860606245-08befc0ff44b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZGl5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
-      <div class="contenu-slide-swiper">
-        <h2>Sécurité</h2>
-        <div class="progress2">
-          <div class="progress-content2">
-            <div class="progress-value2"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="swiper-slide">
-      <img src="https://images.unsplash.com/photo-1608613304899-ea8098577e38?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8ZGl5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
-      <div class="contenu-slide-swiper">
-        <h2>Être un castor</h2>
-        <div class="progress2">
-          <div class="progress-content2">
-            <div class="progress-value2"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="swiper-slide">
-      <img src="https://images.unsplash.com/photo-1540103711724-ebf833bde8d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8ZGl5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
-      <div class="contenu-slide-swiper">
-        <h2>Les outils</h2>
-        <div class="progress2">
-          <div class="progress-content2">
-            <div class="progress-value2"></div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <% end %>
   </div>
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
+  <%# <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div> %>
 </div>
 
 <div class = "nv">
@@ -125,7 +80,7 @@
       <h2>RETROUVEZ NOS NOUVEAUX COURS</h2>
     </div>
     <div>
-    <h3 class = "btndecouvrir"> DÉCOUVRIR</h3>
+    <h3 class = "btndecouvrir"> <%= link_to "DÉCOUVRIR",courses_path %></h3>
     </div>
   </div>
 </div>

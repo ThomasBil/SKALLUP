@@ -1,4 +1,4 @@
-import Swiper, { Navigation, FreeMode, Pagination } from 'swiper'
+import Swiper, { Navigation, FreeMode, Pagination, Autoplay } from 'swiper'
 
 // import 'swiper/swiper.scss';
 import 'swiper/modules/navigation/navigation.min.css';
@@ -11,7 +11,7 @@ import 'swiper/modules/navigation/navigation.min.css';
 const initSwiper = () => {
   if (document.querySelector(".mySwiper")) {
     console.log("initSwiper")
-    Swiper.use([Navigation]);
+    Swiper.use([Navigation, Autoplay]);
     const swiper = new Swiper(".mySwiper", {
       slidesPerView: 3,
       spaceBetween: 30,
@@ -22,6 +22,9 @@ const initSwiper = () => {
       loopFillGroupWithBlank: true,
       observer: true,
       observeParents: true,
+      autoplay: {
+        delay: 5000,
+      },
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",

@@ -21,8 +21,14 @@ puts "Destroy Questions"
 
 
 puts "launch seed"
+
 family = Family.create(name: "Carrelage")
 family2 = Family.create(name: "Parquet, Stratifié et plancher")
+Family.create(name:"Monter un meuble")
+Family.create(name:"Etre un castor")
+Family.create(name:"Electricité")
+Family.create(name:"Les outils")
+
 puts "family done"
 Course.create(
   title:"Carrelage sol et mur",
