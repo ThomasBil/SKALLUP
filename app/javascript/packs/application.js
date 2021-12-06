@@ -28,10 +28,13 @@ import "bootstrap";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
-import { initSwiper } from '../components/swiper'
+import { initSwiper, initSwiperFree } from '../components/swiper'
+import { initProgress } from '../components/progress'
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   initSwiper();
+  initSwiperFree();
+  initProgress();
 });

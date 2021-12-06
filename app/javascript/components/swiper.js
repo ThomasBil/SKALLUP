@@ -1,4 +1,4 @@
-import Swiper, { Navigation } from 'swiper'
+import Swiper, { Navigation, FreeMode, Pagination } from 'swiper'
 
 // import 'swiper/swiper.scss';
 import 'swiper/modules/navigation/navigation.min.css';
@@ -30,4 +30,21 @@ const initSwiper = () => {
   }
 };
 
-export { initSwiper };
+const initSwiperFree = () => {
+  if (document.querySelector(".mySwiperFree")) {
+    console.log("ahah")
+    Swiper.use([Pagination, FreeMode]);
+    const swiper2 = new Swiper(".mySwiperFree", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      freeMode: true,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  }
+};
+
+export { initSwiper, initSwiperFree };

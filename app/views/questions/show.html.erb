@@ -2,27 +2,35 @@
   <%= link_to "RETOUR AUX QUIZZ", quizzes_path %>
 </div>
 
+<div class="progress-container">
+  <h2>You have mastered <%= @good_answers.count %> of <%= @quizz_questions.count %> questions of that quizz</h2>
+  <div class="progress-bar-full">
+    <div class="master-progress" style="width: 0%", data-good="<%= @good_answers.count %>", data-bad="<%= @bad_answers.count %>", data-all="<%= @quizz_questions.count %>" ></div>
+    <div class="not-master-progress" style="width: 0%"></div>
+  </div>
+</div>
+
 
 
 
 <div class="question-cards">
-  <div class="progress">
+  <%# <div class="progress">
     <div class="progress-content">
       <div class="progress-value"></div>
     </div>
     <p>80%</p>
-  </div>
+  </div> %>
   <h2>Vrai ou Faux ?</h2>
   <h1><%= @question.content %></h1>
   <div class="question-answer">
     <%# <p class="button-filter">VRAI</p>
     <p class="button-filter">FAUX</p> %>
     <% if @status == true %>
-      <%= link_to "VRAI", question_answer_path(@question, @user_answer, answer: {user_answer: true}), method: :patch, class: "button-filter" %>
-      <%= link_to "FAUX", question_answer_path(@question, @user_answer, answer: {user_answer: false}), method: :patch, class: "button-filter" %>
+      <%= link_to "VRAI", question_answer_path(@question, @user_answer, answer: {user_answer: true}), method: :patch, class: "button-filter", remote: true %>
+      <%= link_to "FAUX", question_answer_path(@question, @user_answer, answer: {user_answer: false}), method: :patch, class: "button-filter", remote: true %>
     <% else %>
-      <%= link_to "VRAI", question_answers_path(@question, answer: {user_answer: true}), method: :post, class: "button-filter" %>
-      <%= link_to "FAUX", question_answers_path(@question, answer: {user_answer: false}), method: :post, class: "button-filter" %>
+      <%= link_to "VRAI", question_answers_path(@question, answer: {user_answer: true}), method: :post, class: "button-filter", remote: true %>
+      <%= link_to "FAUX", question_answers_path(@question, answer: {user_answer: false}), method: :post, class: "button-filter", remote: true %>
     <% end %>
   </div>
 </div>
