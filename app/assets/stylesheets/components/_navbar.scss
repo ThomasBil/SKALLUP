@@ -3,25 +3,38 @@
 }
 
 .main-navbar {
-  background: rgb(123,136,243);
-  background: linear-gradient(162deg, rgba(123,136,243,1) 19%, rgba(72,71,117,1) 100%);
+  background: #4049F4;
   width: 100%;
-  box-shadow: 0px 12px 21px -4px rgba(84,84,84,0.52);
   position: relative;
+  height: 200px;
 }
 
-.research-bar > h2 {
+.titre {
   margin-top: 20px;
   color: white;
   font-weight: bold;
   font-family: "Work Sans", "Helvetica", "sans-serif";
+  margin-top: 20px;
+  color: white;
+  font-weight: bold;
+  font-family: "Work Sans", "Helvetica", "sans-serif";
+  position: absolute;
+  right: 500PX;
+  bottom: 55px;
+  p {
+    font-weight: lighter;
+  }
+}
+
+
+.research-bar > h2 {
   a {
     color: white;
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
     &:hover {
-      color: #1618a5;
+      color: #7B88F3;
     }
   }
 }
@@ -33,11 +46,11 @@
 
 .skallup {
   position: absolute;
-  right: 25px;
-  top: 0;
+  left: 40px;
+  top: 28px;
   font-family: "Work Sans", "Helvetica", "sans-serif";
   &:hover {
-    color: white
+    color: #7B88F3
   }
 }
 
@@ -56,25 +69,47 @@
 
 .search-form-control .form-control {
   height: 40px;
-  width: 400px;
+  width: 308px;
   margin: auto;
   border-radius: 7px;
+  position: absolute;
+  right: 25px;
+  bottom: -40px;
+  background-color: #5e66fd;
+  border: #5e66fd;
 }
+
+
+.form-control .string .required::placeholder {
+  color: white;
+}
+
 
 .search-form-control .form-control:focus {
   outline: none !important;
 }
 
+.form-control::placeholder {
+  color: #4049F4;
+}
+
+.fa-bell {
+  position: absolute;
+  right: 347px;
+  bottom: -30px;
+  font-size: 19px;
+  color: yellow;
+}
+
 .navbar-link {
   background-color: white;
   border-radius: 10px;
-  width: 215px;
-  height: 350px;
+  width: 230px;
+  height: 425px;
   border-radius: 10px;
-  top: 40px;
-  left: 30px;
+  top: 105px;
+  left: -5px;
   line-height: 40px;
-  box-shadow: 3px 8px 17px 3px rgba(151,151,151,0.63);
   position: fixed;
 }
 
@@ -90,7 +125,6 @@
   padding: 10px 5px 20px 5px;
   align-items: center;
   margin-top: 15px;
-  border-bottom: solid 1px rgba($color: #000000, $alpha: 0.1);
 }
 
 .user img {
@@ -113,8 +147,7 @@
 .link-nav {
   color: #313055;
   :hover {
-      color: #7B88F3
-    ;
+    color: #7B88F3;
   }
 }
 .link-nav li {
@@ -144,16 +177,17 @@
 
 .logout-link-nav {
   margin-top: 5px;
-  background-color: #4c4b7d;
+  background-color: #486AEA;
   padding: 15px 35px;
   border-radius: 10px;
   color: white;
   text-decoration: none;
   &:hover {
     text-decoration: none;
+    color: #7B88F3;
   }
 }
 
 #last-li {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }

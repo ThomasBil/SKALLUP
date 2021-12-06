@@ -3,11 +3,14 @@
   <div class="main-navbar">
     <div class="research-bar">
       <h2 class="skallup"><%= link_to "SKALLUP", dashboard_path %></h2>
-      <h2>WELCOME Thomas !</h2>
+      <div class="titre">
+        <h2>Welcome Thomas !</h2>
+        <p>Devenez un expert du bricolage facilement et rapidement</p>
+      </div>
       <div class="search-bar">
         <form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
           <div class="search-form-control form-group">
-            <input class="form-control string required" type="text" placeholder="Rechercher une leçon, un cours..." name="search[query]" id="search_query" />
+            <i class="far fa-bell"></i><input class="form-control string required" type="text" placeholder="Rechercher une leçon, un cours..." name="search[query]" id="search_query" />
           </div>
         </form>
       </div>
@@ -30,6 +33,7 @@
           <li><%= link_to "Dashboard", dashboard_path %></li>
           <li><%= link_to "Mes cours", courses_path %></li>
           <li><%= link_to "Quizz", quizzes_path %></li>
+          <li>Mes messages</li>
           <li id="last-li">Besoin d'aide ?</li>
           <%= link_to "LOG-OUT", destroy_user_session_path, method: :delete, class: "logout-link-nav"%>
         </div>

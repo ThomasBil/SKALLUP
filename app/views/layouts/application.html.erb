@@ -11,16 +11,34 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+  
+  
   </head>
 
-  <body>
+  <body <% if current_page?(controller: 'pages', action: 'home')%> class="container_homepage" <% end %>>
+
+    <% if current_page?(controller: 'pages', action: 'home') %>
+
+      <%= yield %>
+
+    <% else %>
+
       <%= render 'shared/navbar' %>
 
-      <%= render 'shared/flashes' %>
+      <div class="custom-container">
 
-    <div class="custom-container">
-      <%= yield %>
-    </div>
-    <%= render 'shared/footer' %>
+        <%= yield %>
+
+      </div>
+
+      <%= render 'shared/footer' %>
+
+    <% end %>
+
+
+    <%= render 'shared/flashes' %>
+
+
   </body>
+
 </html>

@@ -1,1 +1,98 @@
-// Specific CSS for your home-page
+
+.container_homepage {
+    margin: 0;
+    font-family: "Work Sans", "Helvetica", "sans-serif";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #0E0000;
+    text-align: left;
+    background: rgb(55,75,221) !important;
+    background: linear-gradient(180deg, rgba(55,75,221,1) 0%, rgba(134,116,227,1) 100%) !important;
+}
+
+.entreprise {
+  margin: 124px 35% 100px 35%;
+  text-align: center;
+  color: white;
+  font-family: 'Roboto';
+}
+
+.entreprise > h1 {
+  font-weight: bold;
+  font-size: 100px;
+  font-family: "Work Sans", "Helvetica", "sans-serif";
+}
+
+.entreprise > p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: lighter;
+}
+
+.button_commencer > a {
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 26px;
+  margin: 0 46%;
+  border: 1px solid;
+  &:hover {
+    color: #8473E2;
+  }
+}
+
+.presentation {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+  grid-auto-rows: minmax(400px, auto);
+  margin: 150px 50px 0 50px;
+}
+
+.text {
+  text-align: center;
+  color: white;
+}
+
+.text > h2 {
+  margin-bottom: 50px;
+  margin-top: 40px
+}
+
+.custom-shape-divider-top-1638785480 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1638785480 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 349px;
+}
+
+.custom-shape-divider-top-1638785480 .shape-fill {
+    fill: #706EE0;
+    opacity: 30%;
+}
+
+.fa-graduation-cap:before {
+    content: "\f19d";
+    font-size: 60px;
+}
+
+.fa-chalkboard-teacher:before {
+    content: "\f51c";
+    font-size: 60px;
+}
+
+.fa-check-circle:before {
+    content: "\f058";
+    font-size: 60px;
+}
