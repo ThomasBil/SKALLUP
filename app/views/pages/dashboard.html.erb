@@ -5,23 +5,25 @@
   </div>
 
   <div class="progression-card">
-  <% counter_quizz = 0 %>
+  <% counter_quizz = @quizzes.count %>
   <% @quizzes.each do |quizz| %>
-    <% counter_quizz += 1 %>
+    <% counter_questions = quizz.questions.count %>
     <% quizz.questions.each do |question| %>
       <% if question.answers.empty? || question.answers[0].status == false %>
-        <% counter_quizz -= 1 %>
+        <% counter_questions -= 1 %>
       <% end %>
     <% end %>
+    <% if counter_questions != quizz.questions.count %>
+      <% counter_quizz -= 1 %>
+    <% end %>
   <% end %>
-  <%= counter_quizz %>
-    <h1></h1>
+    <h1><%= counter_quizz %></h1>
     <h2>Quizz Terminés</h2>
   </div>
 
 
   <div class="progression-card">
-    <h1>78%</h1>
+    <h1><%= (((counter_quizz / @quizzes.count.to_f) * 50).round) + ((@courses_done / @courses.count.to_f) * 50).round %>%</h1>
     <h2>Progression Globale</h2>
   </div>
   </div>
