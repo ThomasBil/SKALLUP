@@ -13,14 +13,30 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
-  <body>
-    <%= render 'shared/navbar' %>
+  <body <% if current_page?(controller: 'pages', action: 'home')%> class="container_homepage" <% end %>>
+
+    <% if current_page?(controller: 'pages', action: 'home') %>
+
+      <%= yield %>
+
+    <% else %>
+
+      <%= render 'shared/navbar' %>
+
+      <div class="custom-container">
+
+        <%= yield %>
+
+      </div>
+
+      <%= render 'shared/footer' %>
+
+    <% end %>
+
 
     <%= render 'shared/flashes' %>
 
-    <div class="custom-container">
-      <%= yield %>
-    </div>
-    <%= render 'shared/footer' %>
+
   </body>
+
 </html>

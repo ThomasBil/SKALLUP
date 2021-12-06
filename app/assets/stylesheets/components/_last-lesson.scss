@@ -1,17 +1,17 @@
 .last-lesson {
   overflow: hidden;
-  height: 250px;
+  height: 225px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   margin-top: 80px;
   border-radius: 10px;
   position: relative;
+  width: 100%;
 }
 
 .last-lesson img {
   height: 100%;
-  width: 444px;
+  width: 325px;
   object-fit: cover;
 }
 
@@ -35,18 +35,27 @@
   border-radius: 10px;
   padding: 10px 70px;
   color: white;
-  background: rgb(57,75,221);
-  background: linear-gradient(180deg, rgba(57,75,221,1) 0%, rgba(121,110,226,1) 100%);
+  background-color: #486AEA;
     &:hover {
-      background: linear-gradient(180deg, rgb(31, 41, 114) 0%, rgb(81, 73, 154) 100%);
-      background-color: purple;
+      background-color: #7B88F3;
       text-decoration: none;
       color: white;
   }
 }
 
+a.btnreprendre {
+  font-size: 17px;
+}
 
 .btnreprendre > h3 {
   margin: 0;
   padding: 0;
+}
+
+.info-cours > h2 {
+  font-size: 22px;
+}
+
+.info-cours > h3 {
+  font-size: 22px;
 }
