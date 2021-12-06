@@ -1,0 +1,40 @@
+<div class="filtre-text">
+  Les cours sur le
+    <button class="btn btn-secondary dropdown-toggle filter" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+      Choisissez un rayon
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <%= link_to "Carrelage",courses_path(family: "Carrelage"), class: "dropdown-item" %>
+      <%= link_to "Parquet, Stratifié et plancher",courses_path(family: "Parquet, Stratifié et plancher"), class: "dropdown-item" %>
+    </div>
+</div>
+
+<div class="difficulties">
+  <div>
+    <div class="dropdown-filter">
+      <span class="filtre-text">Votre niveau</span>
+      <button class="btn btn-secondary dropdown-toggle filter" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+        Tous
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <%= link_to "Débutant",courses_path(difficulty: "Débutant"), class: "dropdown-item" %>
+        <%= link_to "Intermédiaire",courses_path(difficulty: "Intermédiaire"), class: "dropdown-item" %>
+        <%= link_to "Difficile",courses_path(difficulty: "Difficile"), class: "dropdown-item" %>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="dropdown-filter">
+    <span class="filtre-text">Choisissez votre durée</span>
+      <button class="btn btn-secondary dropdown-toggle filter" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+        Tous
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <%= link_to "30 min",courses_path(duration: 30), class: "dropdown-item" %>
+        <%= link_to "45 min",courses_path(duration: 45), class: "dropdown-item" %>
+        <%= link_to "90 min",courses_path(duration: 90), class: "dropdown-item" %>
+      </div>
+    </div>
+  </div>
+</div>
