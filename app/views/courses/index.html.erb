@@ -14,7 +14,7 @@
 <div class="cards">
   <% @courses.each do |course| %>
       <div class = "card-product">
-        <img src="https://latelier.bricoprive.com/wp-content/uploads/2019/12/Header-article-LAtelier-1.png" />
+        <%= cl_image_tag course.photo.key, height: 300, width: 400, crop: :fill %>
         <div class="card-product-infos">
           <h2><%= course.title %></h2>
           <ul class= "card-online">
