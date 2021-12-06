@@ -1,6 +1,0 @@
-<%= form_tag courses_path, method: :get do |f| %>
-  <%= select_tag "search[duration]", options_for_select([15, 30, 45])%>
-  <%= select_tag "search[family]", options_for_select([ "Carrelage", "Parquet, Stratifié et plancher"]) %>
-  <%= submit_tag %>
-  <%= console %>
-<% end %>

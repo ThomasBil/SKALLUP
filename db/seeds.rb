@@ -26,7 +26,7 @@ family2 = Family.create(name: "Parquet, Stratifié et plancher")
 puts "family done"
 Course.create(
   title:"Carrelage sol et mur",
-  difficulty: "hard",
+  difficulty: "Difficile",
   duration: "90",
   content:"Comment se déroule ce cours ?
     Notre animateur vous fait partager son expertise, pas à pas. Vous êtes totalement débutant en bricolage ? Ça tombe bien !
@@ -35,7 +35,7 @@ Course.create(
 family: family)
 Course.create(
   title:"Plaquette de parement et brique de verre",
-  difficulty: "medium",
+  difficulty: "Intermédiaire",
   duration: "45",
   content:"Comment se déroule ce cours ?
     Notre animateur vous fait partager son expertise, pas à pas. Vous êtes totalement débutant en bricolage ? Ça tombe bien !
@@ -44,8 +44,8 @@ Course.create(
 family: family)
 Course.create(
   title:"Terrase et sol extérieur",
-  difficulty: "easy",
-  duration: "25",
+  difficulty: "Débutant",
+  duration: "30",
   content:"Comment se déroule ce cours ?
     Notre animateur vous fait partager son expertise, pas à pas. Vous êtes totalement débutant en bricolage ? Ça tombe bien !
     Nous sommes là pour vous aider à dire : C’EST MOI QUI L’AI FAIT ! Venez apprendre comment poser du carrelage au sol avec un expert !
@@ -55,7 +55,7 @@ family: family)
 
 Course.create(
   title:"Parquet et plancher",
-  difficulty: "medium",
+  difficulty: "Intermédiaire",
   duration: "60",
   content:"Comment se déroule ce cours ?
     Notre animateur vous fait partager son expertise, pas à pas. Vous êtes totalement débutant en bricolage ? Ça tombe bien !

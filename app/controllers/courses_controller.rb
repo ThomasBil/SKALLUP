@@ -1,18 +1,12 @@
 class CoursesController < ApplicationController
   def index
 
-    if params[:search].present?
-      @courses = []
-      @selected_courses = Course.where("duration >= ?", params[:search][:duration])
-      @selected_courses.each do |course|
-        if course.family.name == params[:search][:family]
-          @courses << course
-        end
-      end
-
-      if @courses.size == 0
-        @courses = @selected_courses
-      end
+    if params[:duration].present?
+      @courses = Course.where("duration <= ?", params[:duration])
+    elsif params[:family].present?
+      @courses = Course.joins(:family).where("families.name = ?", params[:family])
+    elsif params[:difficulty].present?
+      @courses = Course.where(" difficulty = ?", params[:difficulty])
     else
       @courses = Course.all
     end
