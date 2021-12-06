@@ -5,7 +5,7 @@
 <div class="progress-container">
   <h2>You have mastered <%= @good_answers.count %> of <%= @quizz_questions.count %> questions of that quizz</h2>
   <div class="progress-bar-full">
-    <div class="master-progress" style="width: 0%"></div>
+    <div class="master-progress" style="width: 0%", data-good="<%= @good_answers.count %>", data-bad="<%= @bad_answers.count %>", data-all="<%= @quizz_questions.count %>" ></div>
     <div class="not-master-progress" style="width: 0%"></div>
   </div>
 </div>
@@ -26,19 +26,11 @@
     <%# <p class="button-filter">VRAI</p>
     <p class="button-filter">FAUX</p> %>
     <% if @status == true %>
-      <%= link_to "VRAI", question_answer_path(@question, @user_answer, answer: {user_answer: true}), method: :patch, class: "button-filter" %>
-      <%= link_to "FAUX", question_answer_path(@question, @user_answer, answer: {user_answer: false}), method: :patch, class: "button-filter" %>
+      <%= link_to "VRAI", question_answer_path(@question, @user_answer, answer: {user_answer: true}), method: :patch, class: "button-filter"%>
+      <%= link_to "FAUX", question_answer_path(@question, @user_answer, answer: {user_answer: false}), method: :patch, class: "button-filter"%>
     <% else %>
-      <%= link_to "VRAI", question_answers_path(@question, answer: {user_answer: true}), method: :post, class: "button-filter" %>
-      <%= link_to "FAUX", question_answers_path(@question, answer: {user_answer: false}), method: :post, class: "button-filter" %>
+      <%= link_to "VRAI", question_answers_path(@question, answer: {user_answer: true}), method: :post, class: "button-filter"%>
+      <%= link_to "FAUX", question_answers_path(@question, answer: {user_answer: false}), method: :post, class: "button-filter"%>
     <% end %>
   </div>
 </div>
-
-
-
-<script>
-  const all_questions = <%= @quizz_questions.count %>
-  const good_questions = <%= @good_answers.count %>
-  const bad_questions = <%= @bad_answers.count %>
-</script>

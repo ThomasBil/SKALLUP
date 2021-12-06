@@ -5,7 +5,17 @@
   </div>
 
   <div class="progression-card">
-    <h1>4</h1>
+  <% counter_quizz = 0 %>
+  <% @quizzes.each do |quizz| %>
+    <% counter_quizz += 1 %>
+    <% quizz.questions.each do |question| %>
+      <% if question.answers.empty? || question.answers[0].status == false %>
+        <% counter_quizz -= 1 %>
+      <% end %>
+    <% end %>
+  <% end %>
+  <%= counter_quizz %>
+    <h1></h1>
     <h2>Quizz Terminés</h2>
   </div>
 

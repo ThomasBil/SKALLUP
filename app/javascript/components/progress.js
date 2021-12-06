@@ -1,12 +1,13 @@
 
 const initProgress = () => {
   if (document.querySelector(".master-progress")) {
-    const progressBarMaster = document.querySelector(".master-progress")
-    progressBarMaster.style.width = `${(good_questions / all_questions) * 100}%`
-  }
-  if (document.querySelector(".not-master-progress")) {
-    const progressBarNotMaster = document.querySelector(".not-master-progress")
-    progressBarNotMaster.style.width = `${(bad_questions / all_questions) * 100}%`
+    console.log("ahaha")
+    const masterProgess = document.querySelector(".master-progress")
+    masterProgess.style.width = `${(masterProgess.dataset.good / masterProgess.dataset.all) * 100}%`
+    if (document.querySelector(".not-master-progress")) {
+      const notMasterProgress = document.querySelector(".not-master-progress")
+      notMasterProgress.style.width = `${(masterProgess.dataset.bad / masterProgess.dataset.all) * 100}%`
+    }
   }
 };
 

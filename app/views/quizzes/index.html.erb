@@ -18,9 +18,9 @@
   <% end %>
   <div class="progress-container-quizz">
     <div class="progress-bar-full" style ="width: 25%">
-      <div class="master-progress" style="width: 0%"></div>
+      <div class="master-progress" style="width: 0%", data-good="<%= @good_answers.count %>", data-all="<%= @quizz_questions.count %>" ></div>
     </div>
-    <p><%= (@good_answers.count / @quizz_questions.count) * 100  %>%</p>
+    <p><%= ((@good_answers.count.to_f / @quizz_questions.count) * 100).round  %>%</p>
   </div>
 
     <div class="quizz-cards-content">
