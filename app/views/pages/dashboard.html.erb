@@ -69,8 +69,8 @@
     </div>
   <% end %>
   </div>
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
+  <%# <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div> %>
 </div>
 
 <div class = "nv">
@@ -80,7 +80,7 @@
       <h2>RETROUVEZ NOS NOUVEAUX COURS</h2>
     </div>
     <div>
-    <h3 class = "btndecouvrir"> DÉCOUVRIR</h3>
+    <h3 class = "btndecouvrir"> <%= link_to "DÉCOUVRIR",courses_path %></h3>
     </div>
   </div>
 </div>
