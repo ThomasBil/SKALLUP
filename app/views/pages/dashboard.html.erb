@@ -1,66 +1,78 @@
+<h2>Toutes mes statistiques</h2>
+
 <div class="swiper mySwiperFree">
 
   <div class="swiper-wrapper">
+
     <div class="swiper-slide swiper-free">
-      <div class="swiper-banner">
-        <h2>COURS TERMINÉS</h2>
-      </div>
-      <div class="progress">
-        <div class="progress-content">
-          <div class="progress-value"></div>
+      <div class="stat">
+        <div class="d-flex justify-content-between">
+
+          <h1><%= @courses_done %></h1>
+          <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="--value: 67"></div>
+
         </div>
+
+        <h2>Cours terminés</h2>
+
       </div>
     </div>
 
+    <div class="swiper-slide swiper-free">
+      <div class="stat">
+        <div class="d-flex justify-content-between">
+          <h1><% counter_quizz = @quizzes.count %>
+            <% @quizzes.each do |quizz| %>
+              <% counter_questions = quizz.questions.count %>
+              <% quizz.questions.each do |question| %>
+                <% if question.answers.empty? || question.answers[0].status == false %>
+                  <% counter_questions -= 1 %>
+                <% end %>
+              <% end %>
+              <% if counter_questions != quizz.questions.count %>
+                <% counter_quizz -= 1 %>
+              <% end %>
+            <% end %>
+            <%= counter_quizz %></h1>
 
+          <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="--value: 67"></div>
+        </div>
+          <h2>Quizz Terminés</h2>
+      </div>
+    </div>
 
+    <div class="swiper-slide swiper-free">
+      <div class="stat">
+        <h1><%= (((counter_quizz / @quizzes.count.to_f) * 50).round) + ((@courses_done / @courses.count.to_f) * 50).round %>%</h1>
+        <h2>Progression Globale</h2>
+      </div>
+    </div>
 
-    <div class="swiper-slide swiper-free">Slide 2</div>
-    <div class="swiper-slide swiper-free">Slide 3</div>
-    <div class="swiper-slide swiper-free">Slide 4</div>
-    <div class="swiper-slide swiper-free">Slide 5</div>
-    <div class="swiper-slide swiper-free">Slide 6</div>
-    <div class="swiper-slide swiper-free">Slide 7</div>
-    <div class="swiper-slide swiper-free">Slide 8</div>
-    <div class="swiper-slide swiper-free">Slide 9</div>
+    <div class="swiper-slide swiper-free">
+      <div class="stat">
+        <div class="d-flex justify-content-between">
+          <h1>12</h1>
+          <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="--value: 67"></div>
+        </div>
+        <h2>Mauvaises réponses aux quizz</h2>
+      </div>
+    </div>
+
+    <div class="swiper-slide swiper-free">
+      <div class="stat">
+        <div class="d-flex justify-content-between">
+          <h1>48</h1>
+          <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="--value: 67"></div>
+        </div>
+        <h2>Bonnes réponses aux quizz</h2>
+      </div>
+    </div>
+
   </div>
 
   <div class="swiper-pagination"></div>
 </div>
 
-
-
-
-
-<div class="progression-cards">
-  <div class="progression-card">
-    <h1><%= @courses_done %></h1>
-    <h2>Cours Terminés</h2>
-  </div>
-
-  <div class="progression-card">
-  <% counter_quizz = @quizzes.count %>
-  <% @quizzes.each do |quizz| %>
-    <% counter_questions = quizz.questions.count %>
-    <% quizz.questions.each do |question| %>
-      <% if question.answers.empty? || question.answers[0].status == false %>
-        <% counter_questions -= 1 %>
-      <% end %>
-    <% end %>
-    <% if counter_questions != quizz.questions.count %>
-      <% counter_quizz -= 1 %>
-    <% end %>
-  <% end %>
-    <h1><%= counter_quizz %></h1>
-    <h2>Quizz Terminés</h2>
-  </div>
-
-
-  <div class="progression-card">
-    <h1><%= (((counter_quizz / @quizzes.count.to_f) * 50).round) + ((@courses_done / @courses.count.to_f) * 50).round %>%</h1>
-    <h2>Progression Globale</h2>
-  </div>
-  </div>
 
 
 
