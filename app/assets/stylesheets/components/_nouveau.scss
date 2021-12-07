@@ -1,11 +1,11 @@
 .nv {
-    background: linear-gradient(162deg, rgba(123,136,243,1) 19%, rgba(72,71,117,1) 100%);
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 100%;
+  background-color: white;
+  opacity: 90%;
   overflow: hidden;
-  height: 180px;
   display: flex;
   align-items: center;
-  margin: 70px 0;
+  margin-bottom: 170px;
   border-radius: 10px;
   position: relative;
 }
@@ -20,10 +20,10 @@
   display: flex;
 }
 
-.st-nouveau h2{
+.st-nouveau h2 {
   font-family: "Work Sans", "Helvetica", "sans-serif";
   font-size: 24px;
-  color: white;
+  color: #486AEA;
   font-weight: bold;
   margin-top: -80px;
   padding: 52px;
@@ -32,18 +32,27 @@
 .btndecouvrir {
   font-family: "Work Sans", "Helvetica", "sans-serif";
   position: absolute;
-  font-weight: bold;
-  bottom: 30px;
-  right: 130px;
+  font-size: 17px;
+  bottom: 20px;
+  right: 80px;
   border-radius: 10px;
   padding: 10px 70px;
-  color: #4050DB;
-  background: rgb(253, 253, 253);
+  background:#486AEA;
+  a {
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+  }
   &:hover {
-    background-color: rgb(129, 131, 143);
+    background-color: #7B88F3;
+    text-decoration: none;
     color: white;
   }
    a:hover {
      text-decoration: none;
    }
+}
+
+.text-nouveauté {
+  margin-bottom: 40px;
 }
