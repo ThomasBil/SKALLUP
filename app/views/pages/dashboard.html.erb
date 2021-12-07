@@ -10,7 +10,7 @@
           <div class="d-flex justify-content-between">
 
             <h1><%= @courses_done.count %></h1>
-            <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="--value: 67"></div>
+            <div role="progressbar" aria-valuenow="<%= ((@courses_done.count / @courses.count.to_f) * 100).round %>" aria-valuemin="0" aria-valuemax="100" style="--value: <%= ((@courses_done.count / @courses.count.to_f) * 100).round %>"></div>
 
           </div>
 
@@ -74,25 +74,25 @@
     <div class="swiper-pagination"></div>
   </div>
 
-  <% if !@courses_done.empty? %>
-    <% last_course_done = @courses_done.last %>
-    <% @next_course = Course.find_by_id(last_course_done.course.id + 1) %>
-    <% if !@next_course.nil? %>
+  <%# <% if !@courses_done.empty? %>
+    <%# <% last_course_done = @courses_done.last %>
+    <%# <% @next_course = Course.find_by_id(last_course_done.course.id + 1) %>
+    <%# <% if !@next_course.nil? %>
       <div class="last-lesson">
         <img src="https://www.mesdepanneurs.fr/sites/mesdepanneurs.fr/files/field/image/pose-de-carrelage.jpg" />
 
         <div class="info">
           <div class="info-cours">
             <h2>COURS</h2>
-            <h3><%= @next_course.title %></h3>
+            <h3>Nimps on s'en fout</h3>
           </div>
             <div>
-              <h3><%= link_to "REPRENDRE", course_path(@next_course), class:"btnreprendre" %></h3>
+              <h3><%= link_to "REPRENDRE", courses_path, class:"btnreprendre" %></h3>
             </div>
         </div>
       </div>
-    <% end %>
-  <% end %>
+    <%# <% end %>
+  <%# <% end %>
   </div>
 
   <div class="swiper mySwiper" style= "height: 500px;">
@@ -136,3 +136,6 @@
   </div>
 
 </div>
+
+
+<%= console %>
