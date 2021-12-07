@@ -3,7 +3,7 @@
   height: 225px;
   background: white;
   display: flex;
-  margin-top: 80px;
+  margin-top: 30px;
   border-radius: 10px;
   position: relative;
   width: 100%;
@@ -58,4 +58,9 @@ a.btnreprendre {
 
 .info-cours > h3 {
   font-size: 22px;
+}
+
+.dernier-cours {
+  margin-bottom: 0px;
+  margin-top: 60px;
 }

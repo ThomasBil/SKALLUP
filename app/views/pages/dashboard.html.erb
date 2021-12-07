@@ -19,6 +19,7 @@
     </div>
 
     <div class="swiper-slide swiper-free">
+      
       <div class="stat">
         <div class="d-flex justify-content-between">
           <h1><% counter_quizz = @quizzes.count %>
@@ -78,11 +79,15 @@
 </div>
 
 
+
+<h2 class="dernier-cours">Dernier cours étudié</h2>
+
   <div class="progression-card">
     <h1><%= (((counter_quizz / @quizzes.count.to_f) * 50).round) + ((@courses_done.count / @courses.count.to_f) * 50).round %>%</h1>
     <h2>Progression Globale</h2>
   </div>
   </div>
+
 
 
 
