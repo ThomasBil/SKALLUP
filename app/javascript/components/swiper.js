@@ -10,7 +10,6 @@ import 'swiper/modules/navigation/navigation.min.css';
 
 const initSwiper = () => {
   if (document.querySelector(".mySwiper")) {
-    console.log("initSwiper")
     Swiper.use([Navigation, Autoplay]);
     const swiper = new Swiper(".mySwiper", {
       slidesPerView: 3,
@@ -35,13 +34,15 @@ const initSwiper = () => {
 
 const initSwiperFree = () => {
   if (document.querySelector(".mySwiperFree")) {
-    console.log("ahah")
-    Swiper.use([Pagination, FreeMode]);
+    Swiper.use([Pagination, FreeMode, Autoplay]);
     const swiper2 = new Swiper(".mySwiperFree", {
       slidesPerView: 3,
       spaceBetween: 30,
       freeMode: true,
       loop: true,
+      autoplay: {
+        delay: 5000,
+      },
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
