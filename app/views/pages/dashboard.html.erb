@@ -78,6 +78,8 @@
     <%# <% last_course_done = @courses_done.last %>
     <%# <% @next_course = Course.find_by_id(last_course_done.course.id + 1) %>
     <%# <% if !@next_course.nil? %>
+
+    <div class="dernier-cours"><h2>Dernier cours étudié</h2></div>
       <div class="last-lesson">
         <img src="https://www.mesdepanneurs.fr/sites/mesdepanneurs.fr/files/field/image/pose-de-carrelage.jpg" />
 
@@ -95,6 +97,9 @@
   <%# <% end %>
   </div>
 
+
+
+  <div class="carousel-cours"><h2>Etudiez vos gammes dans différents secteurs</h2></div>
   <div class="swiper mySwiper" style= "height: 500px;">
     <div class="swiper-wrapper">
     <% @quizzes.each do |family| %>
@@ -110,8 +115,8 @@
                 <% @done_course << family_course %>
               <% end %>
             <% end %>
-          <div class="progress-container-quizz">
-            <div class="progress-bar-full" style ="width: 75%; margin-top: 50px">
+          <div class="progress-container-quizz-version-carousel">
+            <div class="progress-bar-full" style ="width: 75%">
               <div class="master-progress" style="width: 0%", data-good="<%= @done_course.count %>", data-all="<%= @family_courses.count %>" ></div>
             </div>
           </div>
@@ -136,6 +141,3 @@
   </div>
 
 </div>
-
-
-<%= console %>
