@@ -25,7 +25,7 @@ puts "Destroy Questions"
 
 puts "launch seed"
 
-family = Family.create(name: "Carrelage")
+family = Family.create!(name: "Carrelage")
 family2 = Family.create(name: "Parquet, Stratifié et plancher")
 family3 = Family.create(name:"Monter un meuble")
 family4 = Family.create(name:"Etre un castor")
@@ -44,23 +44,30 @@ course = Course.new(
 family: family)
 
   file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+
+
   course.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
   course.save!
 
 
-course = Course.new(
+
+p course = Course.new(
   title:"Plaquette de parement et brique de verre",
   difficulty: "Intermédiaire",
   duration: "45",
   content:"Comment se déroule ce cours ?
     Notre animateur vous fait partager son expertise, pas à pas. Vous êtes totalement débutant en bricolage ? Ça tombe bien !
     Nous sommes là pour vous aider à dire : C’EST MOI QUI L’AI FAIT ! Venez apprendre comment poser du carrelage au sol avec un expert !
-    A l'issue de ce cours, vous serez capable de choisir votre carrelage et le mortier colle adapté, préparer le sol avant la pose, découper, poser et coller vos carreaux de carrelage avant de faire les joints.",
-family: family)
+    A l'issue de ce cours, vous serez capable de choisir votre carrelage et le mortier colle adapté, préparer le sol avant la pose, découper, poser et coller vos carreaux de carrelage avant de faire les joints."
+  )
+  p family
+
+  course.family = family
 
   file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+
   course.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
-  course.save!
+  p course.save!
 
 
 course = Course.new(
@@ -92,6 +99,68 @@ family: family2)
   file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
   course.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
   course.save!
+
+
+  course = Course.new(
+  title:"Terrase et sol extérieur",
+  difficulty: "Débutant",
+  duration: "30",
+  content:"Comment se déroule ce cours ?
+    Notre animateur vous fait partager son expertise, pas à pas. Vous êtes totalement débutant en bricolage ? Ça tombe bien !
+    Nous sommes là pour vous aider à dire : C’EST MOI QUI L’AI FAIT ! Venez apprendre comment poser du carrelage au sol avec un expert !
+    A l'issue de ce cours, vous serez capable de choisir votre carrelage et le mortier colle adapté, préparer le sol avant la pose, découper, poser et coller vos carreaux de carrelage avant de faire les joints.",
+family: family3)
+
+  file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+  course.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+  course.save!
+
+  course = Course.new(
+  title:"Terrase et sol extérieur",
+  difficulty: "Débutant",
+  duration: "30",
+  content:"Comment se déroule ce cours ?
+    Notre animateur vous fait partager son expertise, pas à pas. Vous êtes totalement débutant en bricolage ? Ça tombe bien !
+    Nous sommes là pour vous aider à dire : C’EST MOI QUI L’AI FAIT ! Venez apprendre comment poser du carrelage au sol avec un expert !
+    A l'issue de ce cours, vous serez capable de choisir votre carrelage et le mortier colle adapté, préparer le sol avant la pose, découper, poser et coller vos carreaux de carrelage avant de faire les joints.",
+family: family4)
+
+  file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+  course.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+  course.save!
+
+
+
+  course = Course.new(
+  title:"Terrase et sol extérieur",
+  difficulty: "Débutant",
+  duration: "30",
+  content:"Comment se déroule ce cours ?
+    Notre animateur vous fait partager son expertise, pas à pas. Vous êtes totalement débutant en bricolage ? Ça tombe bien !
+    Nous sommes là pour vous aider à dire : C’EST MOI QUI L’AI FAIT ! Venez apprendre comment poser du carrelage au sol avec un expert !
+    A l'issue de ce cours, vous serez capable de choisir votre carrelage et le mortier colle adapté, préparer le sol avant la pose, découper, poser et coller vos carreaux de carrelage avant de faire les joints.",
+family: family5)
+
+  file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+  course.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+  course.save!
+
+
+
+  course = Course.new(
+  title:"Terrase et sol extérieur",
+  difficulty: "Débutant",
+  duration: "30",
+  content:"Comment se déroule ce cours ?
+    Notre animateur vous fait partager son expertise, pas à pas. Vous êtes totalement débutant en bricolage ? Ça tombe bien !
+    Nous sommes là pour vous aider à dire : C’EST MOI QUI L’AI FAIT ! Venez apprendre comment poser du carrelage au sol avec un expert !
+    A l'issue de ce cours, vous serez capable de choisir votre carrelage et le mortier colle adapté, préparer le sol avant la pose, découper, poser et coller vos carreaux de carrelage avant de faire les joints.",
+family: family6)
+
+  file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+  course.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+  course.save!
+
 
 puts "Course done"
 

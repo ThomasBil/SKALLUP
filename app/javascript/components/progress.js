@@ -3,7 +3,6 @@ const initProgress = () => {
   if (document.querySelector(".master-progress")) {
     const masterProgess = document.querySelectorAll(".master-progress")
     masterProgess.forEach((element) =>{
-      console.log(element)
       element.style.width = `${(element.dataset.good / element.dataset.all) * 100}%`
     });
     if (document.querySelector(".not-master-progress")) {
