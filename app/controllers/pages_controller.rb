@@ -8,6 +8,6 @@ class PagesController < ApplicationController
     @quizzes = Family.all
     @courses = Course.all
     @perfect = @courses.count + @quizzes.count
-    @courses_done = current_user.progresses.count
+    @courses_done = current_user.progresses
   end
 end
