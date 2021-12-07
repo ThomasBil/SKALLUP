@@ -31,6 +31,8 @@ import "bootstrap";
 import { initSwiper, initSwiperFree } from '../components/swiper'
 import { initProgress } from '../components/progress'
 
+
+
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
