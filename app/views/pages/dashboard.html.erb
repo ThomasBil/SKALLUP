@@ -19,6 +19,7 @@
     </div>
 
     <div class="swiper-slide swiper-free">
+      
       <div class="stat">
         <div class="d-flex justify-content-between">
           <h1><% counter_quizz = @quizzes.count %>
@@ -58,6 +59,9 @@
       </div>
     </div>
 
+
+
+
     <div class="swiper-slide swiper-free">
       <div class="stat">
         <div class="d-flex justify-content-between">
@@ -68,28 +72,49 @@
       </div>
     </div>
 
+
   </div>
 
   <div class="swiper-pagination"></div>
 </div>
 
 
+
 <h2 class="dernier-cours">Dernier cours étudié</h2>
 
-<div class="last-lesson">
-  <img src="https://www.mesdepanneurs.fr/sites/mesdepanneurs.fr/files/field/image/pose-de-carrelage.jpg" />
+  <div class="progression-card">
+    <h1><%= (((counter_quizz / @quizzes.count.to_f) * 50).round) + ((@courses_done.count / @courses.count.to_f) * 50).round %>%</h1>
+    <h2>Progression Globale</h2>
+  </div>
+  </div>
 
-  <div class="info">
-    <div class="info-cours">
-      <h2>COURS</h2>
-      <h3>Pourquoi opter pour du carrelage plutôt qu’un autre matériau pour les sols intérieurs ?</h3>
-    </div>
-    <div>
-      <h3><%= link_to "REPRENDRE", course_path(:id), class:"btnreprendre" %></h3>
+
+
+
+
+<div class="progression-cards">
+  <div class="progression-card">
+    <h1><%= @courses_done.count %></h1>
+    <h2>Cours Terminés</h2>
+  </div>
+
+<% if !@courses_done.empty? %>
+  <% last_course_done = @courses_done.last %>
+  <% @next_course = Course.find_by_id(last_course_done.course.id + 1) %>
+  <div class="last-lesson">
+    <img src="https://www.mesdepanneurs.fr/sites/mesdepanneurs.fr/files/field/image/pose-de-carrelage.jpg" />
+
+    <div class="info">
+      <div class="info-cours">
+        <h2>COURS</h2>
+        <h3><%= @next_course.title %></h3>
+      </div>
+        <div>
+          <h3><%= link_to "REPRENDRE", course_path(@next_course), class:"btnreprendre" %></h3>
+        </div>
     </div>
   </div>
-</div>
-
+<% end %>
 
 <div class="swiper mySwiper" style= "height: 500px;">
   <div class="swiper-wrapper">

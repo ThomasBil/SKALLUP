@@ -27,10 +27,10 @@ puts "launch seed"
 
 family = Family.create(name: "Carrelage")
 family2 = Family.create(name: "Parquet, Stratifié et plancher")
-Family.create(name:"Monter un meuble")
-Family.create(name:"Etre un castor")
-Family.create(name:"Electricité")
-Family.create(name:"Les outils")
+family3 = Family.create(name:"Monter un meuble")
+family4 = Family.create(name:"Etre un castor")
+family5 = Family.create(name:"Electricité")
+family6 = Family.create(name:"Les outils")
 
 puts "family done"
 course = Course.new(
@@ -104,7 +104,26 @@ puts "User done"
 Question.create(content:"Est-ce que pour poser du carrelage, il faut du carrelage ?", correct_answer: true, family: family)
 Question.create(content:"Est-ce que pour poser du parquet, il faut du parquet ?", correct_answer: true, family: family)
 Question.create(content:"Est-ce que pour peindre, il faut de la peinture ?", correct_answer: true, family: family)
-Question.create(content:"Est-ce que pour peindre, il faut de la peintuuuuuuure ?", correct_answer: true, family: family2)
+
+Question.create(content:"Est-ce que pour poser du carrelage, il faut du carrelage ?", correct_answer: true, family: family2)
+Question.create(content:"Est-ce que pour poser du parquet, il faut du parquet ?", correct_answer: true, family: family2)
+Question.create(content:"Est-ce que pour peindre, il faut de la peinture ?", correct_answer: true, family: family2)
+
+Question.create(content:"Est-ce que pour poser du carrelage, il faut du carrelage ?", correct_answer: true, family: family3)
+Question.create(content:"Est-ce que pour poser du parquet, il faut du parquet ?", correct_answer: true, family: family3)
+Question.create(content:"Est-ce que pour peindre, il faut de la peinture ?", correct_answer: true, family: family3)
+
+Question.create(content:"Est-ce que pour poser du carrelage, il faut du carrelage ?", correct_answer: true, family: family4)
+Question.create(content:"Est-ce que pour poser du parquet, il faut du parquet ?", correct_answer: true, family: family4)
+Question.create(content:"Est-ce que pour peindre, il faut de la peinture ?", correct_answer: true, family: family4)
+
+Question.create(content:"Est-ce que pour poser du carrelage, il faut du carrelage ?", correct_answer: true, family: family5)
+Question.create(content:"Est-ce que pour poser du parquet, il faut du parquet ?", correct_answer: true, family: family5)
+Question.create(content:"Est-ce que pour peindre, il faut de la peinture ?", correct_answer: true, family: family5)
+
+Question.create(content:"Est-ce que pour poser du carrelage, il faut du carrelage ?", correct_answer: true, family: family6)
+Question.create(content:"Est-ce que pour poser du parquet, il faut du parquet ?", correct_answer: true, family: family6)
+Question.create(content:"Est-ce que pour peindre, il faut de la peinture ?", correct_answer: true, family: family6)
 
 puts "Questions done"
 puts "Seed done"
