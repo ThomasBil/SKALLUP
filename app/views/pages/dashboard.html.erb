@@ -1,157 +1,139 @@
 <h2>Toutes mes statistiques</h2>
+<div>
 
-<div class="swiper mySwiperFree">
+  <div class="swiper mySwiperFree">
 
-  <div class="swiper-wrapper">
+    <div class="swiper-wrapper">
 
-    <div class="swiper-slide swiper-free">
-      <div class="stat">
-        <div class="d-flex justify-content-between">
+      <div class="swiper-slide swiper-free">
+        <div class="stat">
+          <div class="d-flex justify-content-between">
 
-          <h1><%= @courses_done %></h1>
-          <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="--value: 67"></div>
+            <h1><%= @courses_done.count %></h1>
+            <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="--value: 67"></div>
+
+          </div>
+
+          <h2>Cours terminés</h2>
 
         </div>
-
-        <h2>Cours terminés</h2>
-
       </div>
-    </div>
 
-    <div class="swiper-slide swiper-free">
-      
-      <div class="stat">
-        <div class="d-flex justify-content-between">
-          <h1><% counter_quizz = @quizzes.count %>
-            <% @quizzes.each do |quizz| %>
-              <% counter_questions = quizz.questions.count %>
-              <% quizz.questions.each do |question| %>
-                <% if question.answers.empty? || question.answers[0].status == false %>
-                  <% counter_questions -= 1 %>
+      <div class="swiper-slide swiper-free">
+        <div class="stat">
+          <div class="d-flex justify-content-between">
+            <h1><% counter_quizz = @quizzes.count %>
+              <% @quizzes.each do |quizz| %>
+                <% counter_questions = quizz.questions.count %>
+                <% quizz.questions.each do |question| %>
+                  <% if question.answers.empty? || question.answers[0].status == false %>
+                    <% counter_questions -= 1 %>
+                  <% end %>
+                <% end %>
+                <% if counter_questions != quizz.questions.count %>
+                  <% counter_quizz -= 1 %>
                 <% end %>
               <% end %>
-              <% if counter_questions != quizz.questions.count %>
-                <% counter_quizz -= 1 %>
-              <% end %>
-            <% end %>
-            <%= counter_quizz %></h1>
+              <%= counter_quizz %></h1>
 
-          <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="--value: 67"></div>
-        </div>
-          <h2>Quizz Terminés</h2>
-      </div>
-    </div>
-
-    <div class="swiper-slide swiper-free">
-      <div class="stat">
-        <h1><%= (((counter_quizz / @quizzes.count.to_f) * 50).round) + ((@courses_done / @courses.count.to_f) * 50).round %>%</h1>
-        <h2>Progression Globale</h2>
-      </div>
-    </div>
-
-    <div class="swiper-slide swiper-free">
-      <div class="stat">
-        <div class="d-flex justify-content-between">
-          <h1>12</h1>
-          <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="--value: 67"></div>
-        </div>
-        <h2>Mauvaises réponses aux quizz</h2>
-      </div>
-    </div>
-
-
-
-
-    <div class="swiper-slide swiper-free">
-      <div class="stat">
-        <div class="d-flex justify-content-between">
-          <h1>48</h1>
-          <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="--value: 67"></div>
-        </div>
-        <h2>Bonnes réponses aux quizz</h2>
-      </div>
-    </div>
-
-
-  </div>
-
-  <div class="swiper-pagination"></div>
-</div>
-
-
-
-<h2 class="dernier-cours">Dernier cours étudié</h2>
-
-  <div class="progression-card">
-    <h1><%= (((counter_quizz / @quizzes.count.to_f) * 50).round) + ((@courses_done.count / @courses.count.to_f) * 50).round %>%</h1>
-    <h2>Progression Globale</h2>
-  </div>
-  </div>
-
-
-
-
-
-<div class="progression-cards">
-  <div class="progression-card">
-    <h1><%= @courses_done.count %></h1>
-    <h2>Cours Terminés</h2>
-  </div>
-
-<% if !@courses_done.empty? %>
-  <% last_course_done = @courses_done.last %>
-  <% @next_course = Course.find_by_id(last_course_done.course.id + 1) %>
-  <div class="last-lesson">
-    <img src="https://www.mesdepanneurs.fr/sites/mesdepanneurs.fr/files/field/image/pose-de-carrelage.jpg" />
-
-    <div class="info">
-      <div class="info-cours">
-        <h2>COURS</h2>
-        <h3><%= @next_course.title %></h3>
-      </div>
-        <div>
-          <h3><%= link_to "REPRENDRE", course_path(@next_course), class:"btnreprendre" %></h3>
-        </div>
-    </div>
-  </div>
-<% end %>
-
-<div class="swiper mySwiper" style= "height: 500px;">
-  <div class="swiper-wrapper">
-  <% @quizzes.each do |family| %>
-    <div class="swiper-slide">
-      <img src="https://images.unsplash.com/photo-1623043453741-11aef9cb59b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZG8lMjBpdCUyMHlvdXJzZWxmfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
-      <div class="contenu-slide-swiper">
-        <h2><%= family.name %></h2>
-        <% @family_courses = family.courses %>
-          <% @done_course = [] %>
-          <% @family_courses.each do |family_course| %>
-            <% if family_course.progresses.empty? %>
-            <% elsif family_course.progresses[0].completed == true %>
-              <% @done_course << family_course %>
-            <% end %>
-          <% end %>
-        <div class="progress-container-quizz">
-          <div class="progress-bar-full" style ="width: 75%; margin-top: 50px">
-            <div class="master-progress" style="width: 0%", data-good="<%= @done_course.count %>", data-all="<%= @family_courses.count %>" ></div>
+            <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="--value: 67"></div>
           </div>
+            <h2>Quizz Terminés</h2>
         </div>
+      </div>
+
+      <div class="swiper-slide swiper-free">
+        <div class="stat">
+          <div class="d-flex justify-content-between">
+            <h1><%= (((counter_quizz / @quizzes.count.to_f) * 50).round) + ((@courses_done.count / @courses.count.to_f) * 50).round %></h1>
+            <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="--value: 67"></div>
+          </div>
+          <h2>Progression Globale</h2>
+        </div>
+      </div>
+
+      <div class="swiper-slide swiper-free">
+        <div class="stat">
+          <div class="d-flex justify-content-between">
+            <h1>12</h1>
+            <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="--value: 67"></div>
+          </div>
+          <h2>Mauvaises réponses aux quizz</h2>
+        </div>
+      </div>
+
+      <div class="swiper-slide swiper-free">
+        <div class="stat">
+          <div class="d-flex justify-content-between">
+            <h1>48</h1>
+            <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="--value: 67"></div>
+          </div>
+          <h2>Bonnes réponses aux quizz</h2>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <% if !@courses_done.empty? %>
+    <% last_course_done = @courses_done.last %>
+    <% @next_course = Course.find_by_id(last_course_done.course.id + 1) %>
+    <div class="last-lesson">
+      <img src="https://www.mesdepanneurs.fr/sites/mesdepanneurs.fr/files/field/image/pose-de-carrelage.jpg" />
+
+      <div class="info">
+        <div class="info-cours">
+          <h2>COURS</h2>
+          <h3><%= @next_course.title %></h3>
+        </div>
+          <div>
+            <h3><%= link_to "REPRENDRE", course_path(@next_course), class:"btnreprendre" %></h3>
+          </div>
       </div>
     </div>
   <% end %>
   </div>
-  <%# <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div> %>
-</div>
 
-<div class = "nv">
-  <img src="https://m1.lmcdn.fr/media/15/5d8b63971a8f316b60ed9e8a/1753024969/cours-de-bricolage-en-magasin5d8b639697844600099b8346.jpg?width=800&crop=16:9,smart" >
-  <div class= "st">
-    <div class = "st-nouveau">
-      <h2>RETROUVEZ NOS NOUVEAUX COURS</h2>
+  <div class="swiper mySwiper" style= "height: 500px;">
+    <div class="swiper-wrapper">
+    <% @quizzes.each do |family| %>
+      <div class="swiper-slide">
+        <img src="https://images.unsplash.com/photo-1623043453741-11aef9cb59b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZG8lMjBpdCUyMHlvdXJzZWxmfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+        <div class="contenu-slide-swiper">
+          <h2><%= family.name %></h2>
+          <% @family_courses = family.courses %>
+            <% @done_course = [] %>
+            <% @family_courses.each do |family_course| %>
+              <% if family_course.progresses.empty? %>
+              <% elsif family_course.progresses[0].completed == true %>
+                <% @done_course << family_course %>
+              <% end %>
+            <% end %>
+          <div class="progress-container-quizz">
+            <div class="progress-bar-full" style ="width: 75%; margin-top: 50px">
+              <div class="master-progress" style="width: 0%", data-good="<%= @done_course.count %>", data-all="<%= @family_courses.count %>" ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
     </div>
-    <div>
-    <h3 class = "btndecouvrir"> <%= link_to "DÉCOUVRIR",courses_path %></h3>
+    <%# <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div> %>
+  </div>
+
+  <div class = "nv">
+    <img src="https://m1.lmcdn.fr/media/15/5d8b63971a8f316b60ed9e8a/1753024969/cours-de-bricolage-en-magasin5d8b639697844600099b8346.jpg?width=800&crop=16:9,smart" >
+    <div class= "st">
+      <div class = "st-nouveau">
+        <h2>RETROUVEZ NOS NOUVEAUX COURS</h2>
+      </div>
+      <div>
+      <h3 class = "btndecouvrir"> <%= link_to "DÉCOUVRIR",courses_path %></h3>
+      </div>
     </div>
   </div>
+
 </div>
