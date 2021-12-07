@@ -10,7 +10,9 @@ import 'swiper/modules/navigation/navigation.min.css';
 
 const initSwiper = () => {
   if (document.querySelector(".mySwiper")) {
+
     Swiper.use([Navigation, Autoplay]);
+
     const swiper = new Swiper(".mySwiper", {
       slidesPerView: 3,
       spaceBetween: 30,

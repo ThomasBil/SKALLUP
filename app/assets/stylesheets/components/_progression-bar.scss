@@ -2,7 +2,7 @@
 .progress-bar-full {
   width: 1000px;
   height: 15px;
-  background-color: #d1cccc;
+  background-color: whitesmoke;
   border-radius: 50px;
   margin: 0 auto ;
   display: flex;
@@ -11,7 +11,7 @@
 
 .master-progress {
   transition: 1s;
-  background-color: #535adf;
+  background-color: #65D1B9;
   opacity: 0.7;
 }
 
@@ -28,11 +28,17 @@
   .progress-bar-full {
     position: absolute;
     right: 75px;
-    top: 0;
+    top: 5px;
   }
   p {
     position: absolute;
     right: 0px;
     top: 0;
   }
+}
+
+.progress-container-quizz-version-carousel > .progress-bar-full {
+    position: absolute;
+    right: 75px;
+    top: 100px;
 }
