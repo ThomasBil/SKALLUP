@@ -4,7 +4,9 @@
     <div class="research-bar">
       <h2 class="skallup"><%= link_to "SKALLUP", dashboard_path %></h2>
       <div class="titre">
-        <h2>Welcome <%= current_user.username %> !</h2>
+        <% if !current_user.nil? %>
+          <h2>Welcome <%= current_user.username %> !</h2>
+        <% end %>
         <p>Devenez un expert du bricolage facilement et rapidement</p>
       </div>
       <div class="search-bar">

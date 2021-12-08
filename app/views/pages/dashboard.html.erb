@@ -120,6 +120,9 @@
               <div class="master-progress" style="width: 0%", data-good="<%= @done_course.count %>", data-all="<%= @family_courses.count %>" ></div>
             </div>
           </div>
+          <div class="percent-calcul">
+            <p><%= ((@done_course.count.to_f / @family_courses.count) * 100).round %> %</p>
+          </div>
         </div>
       </div>
     <% end %>
