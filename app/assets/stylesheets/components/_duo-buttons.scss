@@ -1,8 +1,24 @@
+.container-castor {
+  // background-color: red;
+  width: 100%;
+  position: relative;
+  img {
+    position: absolute;
+    width: 100px;
+    right: 50%;
+    top: 0;
+    visibility: hidden;
+  }
+}
+
+
+
 .button-finish {
   background-color: #3546DE;
   width: fit-content;
   padding: 15px 250px;
   margin: 20px auto;
+  visibility: visible;
   a {
     color: white;
     text-decoration: none;
