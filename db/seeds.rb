@@ -26,18 +26,18 @@ puts "Destroy Questions"
 puts "launch seed"
 
 family = Family.create!(name: "Carrelage")
-family2 = Family.create(name: "Parquet, Stratifié et plancher")
-family3 = Family.create(name:"Monter un meuble")
-family4 = Family.create(name:"Etre un castor")
-family5 = Family.create(name:"Electricité")
-family6 = Family.create(name:"Les outils")
+family2 = Family.create(name: "Parquet")
+family3 = Family.create(name: "Stratifié")
+family4 = Family.create(name: "Plancher")
+family5 = Family.create(name: "Sol souple")
+family6 = Family.create(name: "Revêtement extérieur")
 
 puts "family done"
 course = Course.new(
-  title:"Carrelage sol et mur",
+  title: "Carrelage sol et mur",
   difficulty: "Difficile",
   duration: "90",
-  content:"Comment se déroule ce cours ?
+  content: "Comment se déroule ce cours ?""
     Notre animateur vous fait partager son expertise, pas à pas. Vous êtes totalement débutant en bricolage ? Ça tombe bien !
     Nous sommes là pour vous aider à dire : C’EST MOI QUI L’AI FAIT ! Venez apprendre comment poser du carrelage au sol avec un expert !
     A l'issue de ce cours, vous serez capable de choisir votre carrelage et le mortier colle adapté, préparer le sol avant la pose, découper, poser et coller vos carreaux de carrelage avant de faire les joints.",
@@ -52,10 +52,10 @@ family: family)
 
 
 p course = Course.new(
-  title:"Plaquette de parement et brique de verre",
+  title: "Plaquette de parement et brique de verre",
   difficulty: "Intermédiaire",
   duration: "45",
-  content:"Comment se déroule ce cours ?
+  content: "Comment se déroule ce cours ?
     Notre animateur vous fait partager son expertise, pas à pas. Vous êtes totalement débutant en bricolage ? Ça tombe bien !
     Nous sommes là pour vous aider à dire : C’EST MOI QUI L’AI FAIT ! Venez apprendre comment poser du carrelage au sol avec un expert !
     A l'issue de ce cours, vous serez capable de choisir votre carrelage et le mortier colle adapté, préparer le sol avant la pose, découper, poser et coller vos carreaux de carrelage avant de faire les joints."
@@ -71,10 +71,10 @@ p course = Course.new(
 
 
 course = Course.new(
-  title:"Terrase et sol extérieur",
+  title: "Carrelage sol et mur",
   difficulty: "Débutant",
   duration: "30",
-  content:"Comment se déroule ce cours ?
+  content: "Comment se déroule ce cours ?
     Notre animateur vous fait partager son expertise, pas à pas. Vous êtes totalement débutant en bricolage ? Ça tombe bien !
     Nous sommes là pour vous aider à dire : C’EST MOI QUI L’AI FAIT ! Venez apprendre comment poser du carrelage au sol avec un expert !
     A l'issue de ce cours, vous serez capable de choisir votre carrelage et le mortier colle adapté, préparer le sol avant la pose, découper, poser et coller vos carreaux de carrelage avant de faire les joints.",
@@ -87,10 +87,10 @@ family: family)
 
 
 course = Course.new(
-  title:"Parquet et plancher",
+  title: "Parquet et plancher",
   difficulty: "Intermédiaire",
   duration: "60",
-  content:"Comment se déroule ce cours ?
+  content: "Comment se déroule ce cours ?
     Notre animateur vous fait partager son expertise, pas à pas. Vous êtes totalement débutant en bricolage ? Ça tombe bien !
     Nous sommes là pour vous aider à dire : C’EST MOI QUI L’AI FAIT ! Venez apprendre comment poser du carrelage au sol avec un expert !
     A l'issue de ce cours, vous serez capable de choisir votre carrelage et le mortier colle adapté, préparer le sol avant la pose, découper, poser et coller vos carreaux de carrelage avant de faire les joints.",
@@ -102,10 +102,10 @@ family: family2)
 
 
   course = Course.new(
-  title:"Terrase et sol extérieur",
+  title: "Terrasse et sol extérieur",
   difficulty: "Débutant",
   duration: "30",
-  content:"Comment se déroule ce cours ?
+  content: "Comment se déroule ce cours ?
     Notre animateur vous fait partager son expertise, pas à pas. Vous êtes totalement débutant en bricolage ? Ça tombe bien !
     Nous sommes là pour vous aider à dire : C’EST MOI QUI L’AI FAIT ! Venez apprendre comment poser du carrelage au sol avec un expert !
     A l'issue de ce cours, vous serez capable de choisir votre carrelage et le mortier colle adapté, préparer le sol avant la pose, découper, poser et coller vos carreaux de carrelage avant de faire les joints.",
@@ -116,10 +116,10 @@ family: family3)
   course.save!
 
   course = Course.new(
-  title:"Terrase et sol extérieur",
+  title: "sol stratifié",
   difficulty: "Débutant",
   duration: "30",
-  content:"Comment se déroule ce cours ?
+  content: "Comment se déroule ce cours ?
     Notre animateur vous fait partager son expertise, pas à pas. Vous êtes totalement débutant en bricolage ? Ça tombe bien !
     Nous sommes là pour vous aider à dire : C’EST MOI QUI L’AI FAIT ! Venez apprendre comment poser du carrelage au sol avec un expert !
     A l'issue de ce cours, vous serez capable de choisir votre carrelage et le mortier colle adapté, préparer le sol avant la pose, découper, poser et coller vos carreaux de carrelage avant de faire les joints.",
@@ -132,7 +132,7 @@ family: family4)
 
 
   course = Course.new(
-  title:"Terrase et sol extérieur",
+  title:"Lame, dalle et sol PVC",
   difficulty: "Débutant",
   duration: "30",
   content:"Comment se déroule ce cours ?
@@ -148,13 +148,12 @@ family: family5)
 
 
   course = Course.new(
-  title:"Terrase et sol extérieur",
+  title:"Quel revêtement conseiller, carrelage ou parquet ?",
   difficulty: "Débutant",
   duration: "30",
-  content:"Comment se déroule ce cours ?
-    Notre animateur vous fait partager son expertise, pas à pas. Vous êtes totalement débutant en bricolage ? Ça tombe bien !
-    Nous sommes là pour vous aider à dire : C’EST MOI QUI L’AI FAIT ! Venez apprendre comment poser du carrelage au sol avec un expert !
-    A l'issue de ce cours, vous serez capable de choisir votre carrelage et le mortier colle adapté, préparer le sol avant la pose, découper, poser et coller vos carreaux de carrelage avant de faire les joints.",
+  content:".",
+
+
 family: family6)
 
   file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
@@ -164,35 +163,35 @@ family: family6)
 
 puts "Course done"
 
-nassim = User.create(email: "nassim@lewagon.fr", password: "azerty", username: "NassimCastor")
-nabila = User.create(email: "nabila@lewagon.fr", password: "azerty", username: "NabilaPasCastor")
-thomas = User.create(email: "thomas@lewagon.fr", password: "azerty", username: "ThomasPasCastor")
+nassim = User.create(email: "nassim@lewagon.fr", password: "azerty", username: "Nassim")
+nabila = User.create(email: "nabila@lewagon.fr", password: "azerty", username: "Nabila")
+thomas = User.create(email: "thomas@lewagon.fr", password: "azerty", username: "Thomas")
 puts "User done"
 
 
-Question.create(content:"Est-ce que pour poser du carrelage, il faut du carrelage ?", correct_answer: true, family: family)
-Question.create(content:"Est-ce que pour poser du parquet, il faut du parquet ?", correct_answer: true, family: family)
-Question.create(content:"Est-ce que pour peindre, il faut de la peinture ?", correct_answer: true, family: family)
+Question.create(content: "Est-ce que pour poser du carrelage, il faut du carrelage ?", correct_answer: true, family: family)
+Question.create(content: "Est-ce que pour poser du parquet, il faut du parquet ?", correct_answer: true, family: family)
+Question.create(content: "Est-ce que pour peindre, il faut de la peinture ?", correct_answer: true, family: family)
 
-Question.create(content:"Est-ce que pour poser du carrelage, il faut du carrelage ?", correct_answer: true, family: family2)
-Question.create(content:"Est-ce que pour poser du parquet, il faut du parquet ?", correct_answer: true, family: family2)
-Question.create(content:"Est-ce que pour peindre, il faut de la peinture ?", correct_answer: true, family: family2)
+Question.create(content: "Est-ce que pour poser du carrelage, il faut du carrelage ?", correct_answer: true, family: family2)
+Question.create(content: "Est-ce que pour poser du parquet, il faut du parquet ?", correct_answer: true, family: family2)
+Question.create(content: "Est-ce que pour peindre, il faut de la peinture ?", correct_answer: true, family: family2)
 
-Question.create(content:"Est-ce que pour poser du carrelage, il faut du carrelage ?", correct_answer: true, family: family3)
-Question.create(content:"Est-ce que pour poser du parquet, il faut du parquet ?", correct_answer: true, family: family3)
-Question.create(content:"Est-ce que pour peindre, il faut de la peinture ?", correct_answer: true, family: family3)
+Question.create(content: "Est-ce que pour poser du carrelage, il faut du carrelage ?", correct_answer: true, family: family3)
+Question.create(content: "Est-ce que pour poser du parquet, il faut du parquet ?", correct_answer: true, family: family3)
+Question.create(content: "Est-ce que pour peindre, il faut de la peinture ?", correct_answer: true, family: family3)
 
-Question.create(content:"Est-ce que pour poser du carrelage, il faut du carrelage ?", correct_answer: true, family: family4)
-Question.create(content:"Est-ce que pour poser du parquet, il faut du parquet ?", correct_answer: true, family: family4)
-Question.create(content:"Est-ce que pour peindre, il faut de la peinture ?", correct_answer: true, family: family4)
+Question.create(content: "Est-ce que pour poser du carrelage, il faut du carrelage ?", correct_answer: true, family: family4)
+Question.create(content: "Est-ce que pour poser du parquet, il faut du parquet ?", correct_answer: true, family: family4)
+Question.create(content: "Est-ce que pour peindre, il faut de la peinture ?", correct_answer: true, family: family4)
 
-Question.create(content:"Est-ce que pour poser du carrelage, il faut du carrelage ?", correct_answer: true, family: family5)
-Question.create(content:"Est-ce que pour poser du parquet, il faut du parquet ?", correct_answer: true, family: family5)
-Question.create(content:"Est-ce que pour peindre, il faut de la peinture ?", correct_answer: true, family: family5)
+Question.create(content: "Est-ce que pour poser du carrelage, il faut du carrelage ?", correct_answer: true, family: family5)
+Question.create(content: "Est-ce que pour poser du parquet, il faut du parquet ?", correct_answer: true, family: family5)
+Question.create(content: "Est-ce que pour peindre, il faut de la peinture ?", correct_answer: true, family: family5)
 
-Question.create(content:"Est-ce que pour poser du carrelage, il faut du carrelage ?", correct_answer: true, family: family6)
-Question.create(content:"Est-ce que pour poser du parquet, il faut du parquet ?", correct_answer: true, family: family6)
-Question.create(content:"Est-ce que pour peindre, il faut de la peinture ?", correct_answer: true, family: family6)
+Question.create(content: "Est-ce que pour poser du carrelage, il faut du carrelage ?", correct_answer: true, family: family6)
+Question.create(content: "Est-ce que pour poser du parquet, il faut du parquet ?", correct_answer: true, family: family6)
+Question.create(content: "Est-ce que pour peindre, il faut de la peinture ?", correct_answer: true, family: family6)
 
 puts "Questions done"
 puts "Seed done"
