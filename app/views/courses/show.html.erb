@@ -5,11 +5,14 @@
   </div>
   <p><%= @course.content %></p>
 
-  <% if @progress.nil? %>
-    <div class="button-finish">
-      <%= link_to "J'AI TERMINÉ CE CHAPITRE", course_progresses_path(@course), method: :post %>
-    </div>    
-  <% end %>
+  <div class="container-castor">
+    <% if @progress.nil? %>
+      <div class="button-finish">
+        <%= image_tag("castor-renonçant-à-des-pouces-89682889.png", id: "image_castor") %>
+        <%= link_to "J'AI TERMINÉ CE CHAPITRE", course_progresses_path(@course), method: :post %>
+      </div>
+    <% end %>
+  </div>
 
   <div class="duo-buttons">
 

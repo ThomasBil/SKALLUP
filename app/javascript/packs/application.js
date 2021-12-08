@@ -30,6 +30,7 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 import { initSwiper, initSwiperFree } from '../components/swiper'
 import { initProgress } from '../components/progress'
+import { initButton } from "../components/button";
 
 
 
@@ -39,4 +40,5 @@ document.addEventListener('turbolinks:load', () => {
   initSwiper();
   initSwiperFree();
   initProgress();
+  initButton();
 });
