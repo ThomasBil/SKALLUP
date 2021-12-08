@@ -31,6 +31,18 @@
   }
 }
 
+.contenue-relatif {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.percent-calcul {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
+
 .swiper-button-prev {
   margin-right: 15px;
 }
