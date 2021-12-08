@@ -43,7 +43,7 @@ course = Course.new(
     A l'issue de ce cours, vous serez capable de choisir votre carrelage et le mortier colle adapté, préparer le sol avant la pose, découper, poser et coller vos carreaux de carrelage avant de faire les joints.",
 family: family)
 
-  file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+  file = URI.open('https://images.unsplash.com/photo-1614598632980-35ee54daa5b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Zmxvb3IlMjB0aWxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60')
 
 
   course.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
@@ -51,7 +51,7 @@ family: family)
 
 
 
-p course = Course.new(
+course = Course.new(
   title: "Plaquette de parement et brique de verre",
   difficulty: "Intermédiaire",
   duration: "45",
@@ -60,30 +60,14 @@ p course = Course.new(
     Nous sommes là pour vous aider à dire : C’EST MOI QUI L’AI FAIT ! Venez apprendre comment poser du carrelage au sol avec un expert !
     A l'issue de ce cours, vous serez capable de choisir votre carrelage et le mortier colle adapté, préparer le sol avant la pose, découper, poser et coller vos carreaux de carrelage avant de faire les joints."
   )
-  p family
+  family
 
   course.family = family
 
-  file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+  file = URI.open('https://images.unsplash.com/photo-1611506420749-9cbb8e5a1057?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80')
 
   course.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
   p course.save!
-
-
-course = Course.new(
-  title: "Carrelage sol et mur",
-  difficulty: "Débutant",
-  duration: "30",
-  content: "Comment se déroule ce cours ?
-    Notre animateur vous fait partager son expertise, pas à pas. Vous êtes totalement débutant en bricolage ? Ça tombe bien !
-    Nous sommes là pour vous aider à dire : C’EST MOI QUI L’AI FAIT ! Venez apprendre comment poser du carrelage au sol avec un expert !
-    A l'issue de ce cours, vous serez capable de choisir votre carrelage et le mortier colle adapté, préparer le sol avant la pose, découper, poser et coller vos carreaux de carrelage avant de faire les joints.",
-family: family)
-
-  file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
-  course.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
-  course.save!
-
 
 
 course = Course.new(
@@ -96,7 +80,7 @@ course = Course.new(
     A l'issue de ce cours, vous serez capable de choisir votre carrelage et le mortier colle adapté, préparer le sol avant la pose, découper, poser et coller vos carreaux de carrelage avant de faire les joints.",
 family: family2)
 
-  file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+  file = URI.open('https://images.unsplash.com/photo-1585128792020-803d29415281?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80')
   course.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
   course.save!
 
@@ -111,7 +95,7 @@ family: family2)
     A l'issue de ce cours, vous serez capable de choisir votre carrelage et le mortier colle adapté, préparer le sol avant la pose, découper, poser et coller vos carreaux de carrelage avant de faire les joints.",
 family: family3)
 
-  file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+  file = URI.open('https://images.unsplash.com/photo-1617850687395-620757feb1f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8dGVycmFjZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60')
   course.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
   course.save!
 
@@ -125,7 +109,7 @@ family: family3)
     A l'issue de ce cours, vous serez capable de choisir votre carrelage et le mortier colle adapté, préparer le sol avant la pose, découper, poser et coller vos carreaux de carrelage avant de faire les joints.",
 family: family4)
 
-  file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+  file = URI.open('https://images.unsplash.com/photo-1575204015311-0fe377370780?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bGFtaW5hdGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60')
   course.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
   course.save!
 
@@ -141,7 +125,7 @@ family: family4)
     A l'issue de ce cours, vous serez capable de choisir votre carrelage et le mortier colle adapté, préparer le sol avant la pose, découper, poser et coller vos carreaux de carrelage avant de faire les joints.",
 family: family5)
 
-  file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+  file = URI.open('https://images.unsplash.com/photo-1608613304899-ea8098577e38?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHZjJTIwY2FycGVudHJ5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60')
   course.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
   course.save!
 
@@ -151,12 +135,10 @@ family: family5)
   title:"Quel revêtement conseiller, carrelage ou parquet ?",
   difficulty: "Débutant",
   duration: "30",
-  content:".",
+  content:"un cours",
+  family: family6)
 
-
-family: family6)
-
-  file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+  file = URI.open('https://images.unsplash.com/photo-1452860606245-08befc0ff44b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZGl5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60')
   course.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
   course.save!
 
