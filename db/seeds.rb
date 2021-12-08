@@ -100,7 +100,7 @@ family: family3)
   course.save!
 
   course = Course.new(
-  title: "sol stratifié",
+  title: "Sol stratifié",
   difficulty: "Débutant",
   duration: "30",
   content: "Comment se déroule ce cours ?
