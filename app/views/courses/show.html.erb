@@ -7,8 +7,11 @@
 
   <div class="container-castor">
     <% if @progress.nil? %>
-      <div class="button-finish">
+      <div class="image-text-castor">
         <%= image_tag("castor-renonçant-à-des-pouces-89682889.png", id: "image_castor") %>
+        <h2> C'est super t'as finis le cours : <%= @course.title %></h2>
+      </div>
+      <div class="button-finish">
         <%= link_to "J'AI TERMINÉ CE CHAPITRE", course_progresses_path(@course), method: :post %>
       </div>
     <% end %>
