@@ -28,6 +28,7 @@
 .fa-check-circle {
   color: #94d82d;
   position: absolute;
+  font-size: 60px;
   right: -25px;
   top: -25px;
 }
@@ -100,12 +101,24 @@
 }
 
 
-.active {
-  color: black;
-}
+// .active {
+//   color: black;
+// }
 
 .inactive {
-  color: whitesmoke;
+  opacity: 0.3;
+}
+
+.easy {
+  color: #83c520;
+}
+
+.medium {
+  color: #c5a720;
+}
+
+.hard {
+  color: #e65117;
 }
 
 #style {
