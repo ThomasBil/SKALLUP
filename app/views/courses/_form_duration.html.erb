@@ -8,8 +8,9 @@
           <% end %>
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <%= link_to "Carrelage",courses_path(family: "Carrelage"), class: "dropdown-item" %>
-      <%= link_to "Parquet, Stratifié et plancher",courses_path(family: "Parquet, Stratifié et plancher"), class: "dropdown-item" %>
+    <% @families.each do |family| %>
+      <%= link_to "#{family.name}",courses_path(family: "#{family.name}"), class: "dropdown-item" %>
+    <% end %>
     </div>
 </div>
 
