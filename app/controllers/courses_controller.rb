@@ -1,15 +1,12 @@
 class CoursesController < ApplicationController
   def index
+    @courses = Course.all
 
-    if params[:duration].present?
-      @courses = Course.where("duration <= ?", params[:duration])
-    elsif params[:family].present?
-      @courses = Course.joins(:family).where("families.name = ?", params[:family])
-    elsif params[:difficulty].present?
-      @courses = Course.where(" difficulty = ?", params[:difficulty])
-    else
-      @courses = Course.all
-    end
+      @courses = @courses.where("duration <= ?", params[:duration])  if params[:duration].present?
+
+      @courses = @courses.joins(:family).where("families.name = ?", params[:family]) if params[:family].present?
+      @courses = @courses.where(" difficulty = ?", params[:difficulty]) if params[:difficulty].present?
+
     @courses = @courses.reverse
     @families = Family.all
   end
