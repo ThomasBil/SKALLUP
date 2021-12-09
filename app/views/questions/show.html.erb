@@ -10,21 +10,14 @@
   </div>
 </div>
 
-
-
-
-<div class="question-cards">
-  <%# <div class="progress">
-    <div class="progress-content">
-      <div class="progress-value"></div>
-    </div>
-    <p>80%</p>
-  </div> %>
+<% if ((@good_answers.count.to_f / @quizz_questions.count) * 100).round == 100 %>
+  <div class="question-cards done">
+<% else %>
+  <div class="question-cards">
+<% end %>
   <h2>Vrai ou Faux ?</h2>
   <h1><%= @question.content %></h1>
   <div class="question-answer">
-    <%# <p class="button-filter">VRAI</p>
-    <p class="button-filter">FAUX</p> %>
     <% if @status == true %>
       <%= link_to "VRAI", question_answer_path(@question, @user_answer, answer: {user_answer: true}), method: :patch, class: "button-filter", remote: true %>
       <%= link_to "FAUX", question_answer_path(@question, @user_answer, answer: {user_answer: false}), method: :patch, class: "button-filter", remote: true %>
