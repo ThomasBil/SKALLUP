@@ -35,7 +35,12 @@
                 <p>Difficulté</p>
               </div>
             </li>
-            <li><p id="style"> <%= course.duration %> min</p></li>
+            <li>
+              <div class = "alignement m-3 text-center">
+                <i class="far fa-clock"></i>
+                <p id="style", style="margin: 8px"> <%= course.duration %> min</p>
+              </div>
+            </li>
           </ul>
           <%= link_to 'DÉMARRER', course_path(course), class: "btn-cours" %>
         </div>

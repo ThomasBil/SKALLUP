@@ -121,6 +121,11 @@
   color: #e65117;
 }
 
+.fa-clock::before {
+  font-size: 25px;
+  opacity: 0.3;
+}
+
 #style {
   margin-top: 63px;
   font-family: "Work Sans", "Helvetica", "sans-serif";
