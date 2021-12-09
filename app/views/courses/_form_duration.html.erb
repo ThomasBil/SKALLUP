@@ -9,7 +9,7 @@
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
     <% @families.each do |family| %>
-      <%= link_to "#{family.name}",courses_path(family: "#{family.name}"), class: "dropdown-item" %>
+      <%= link_to "#{family.name}",courses_path(family: family.name, difficulty: params[:difficulty], duration: params[:duration]), class: "dropdown-item" %>
     <% end %>
     </div>
 </div>
@@ -26,9 +26,9 @@
           <% end %>
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <%= link_to "Débutant",courses_path(difficulty: "Débutant"), class: "dropdown-item"%>
-        <%= link_to "Intermédiaire",courses_path(difficulty: "Intermédiaire"), class: "dropdown-item" %>
-        <%= link_to "Difficile",courses_path(difficulty: "Difficile"), class: "dropdown-item" %>
+        <%= link_to "Débutant",courses_path(difficulty: "Débutant", family: params[:family], duration: params[:duration]), class: "dropdown-item"%>
+        <%= link_to "Intermédiaire",courses_path(difficulty: "Intermédiaire", family: params[:family], duration: params[:duration]), class: "dropdown-item" %>
+        <%= link_to "Difficile",courses_path(difficulty: "Difficile", family: params[:family], duration: params[:duration]), class: "dropdown-item" %>
       </div>
     </div>
   </div>
@@ -44,9 +44,9 @@
           <% end %>
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <%= link_to "30 min",courses_path(duration: 30), class: "dropdown-item" %>
-        <%= link_to "45 min",courses_path(duration: 45), class: "dropdown-item" %>
-        <%= link_to "90 min",courses_path(duration: 90), class: "dropdown-item" %>
+        <%= link_to "30 min",courses_path(duration: 30, family: params[:family], difficulty: params[:difficulty]), class: "dropdown-item" %>
+        <%= link_to "45 min",courses_path(duration: 45, family: params[:family], difficulty: params[:difficulty]), class: "dropdown-item" %>
+        <%= link_to "90 min",courses_path(duration: 90, family: params[:family], difficulty: params[:difficulty]), class: "dropdown-item" %>
       </div>
     </div>
   </div>
