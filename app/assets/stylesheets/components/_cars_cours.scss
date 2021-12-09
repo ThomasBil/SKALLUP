@@ -3,6 +3,17 @@
 }
 
 .card-product {
+  width: 80%;
+  height: 270px;
+  background: white;
+  display: flex;
+  align-items: center;
+  margin: 70px 0px 70px 50px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.card-product-not-done {
   overflow: hidden;
   width: 80%;
   height: 270px;
@@ -14,7 +25,16 @@
   position: relative;
 }
 
+.fa-check-circle {
+  color: #94d82d;
+  position: absolute;
+  right: -25px;
+  top: -25px;
+}
 
+.hidden {
+  display: none;
+}
 .card-product img {
   height: 100%;
   width: 290px;
@@ -42,6 +62,7 @@
 .card-product-infos h2 {
   font-size: 25px;
   margin-top: 29px;
+  margin-left: 25px;
   font-family: "Work Sans", "Helvetica", "sans-serif";
 }
 

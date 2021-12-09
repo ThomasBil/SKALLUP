@@ -1,13 +1,5 @@
 <h1>Testez vous</h1>
 <% @quizzes.each do |quiz| %>
-  <div class="quizz-cards-index">
-
-  <%# <div class="progress">
-    <div class="progress-content">
-      <div class="progress-value"></div>
-    </div>
-    <p>80%</p>
-  </div> %>
   <% @quizz_questions = quiz.questions %>
   <% @good_answers = [] %>
   <% @quizz_questions.each do |quizz_question| %>
@@ -16,11 +8,16 @@
       <% @good_answers << quizz_question %>
     <% end %>
   <% end %>
-  <div class="progress-container-quizz">
-    <div class="progress-bar-full" style ="width: 25%">
-      <div class="master-progress" style="width: 0%", data-good="<%= @good_answers.count %>", data-all="<%= @quizz_questions.count %>" ></div>
-    </div>
-    <p><%= ((@good_answers.count.to_f / @quizz_questions.count) * 100).round  %>%</p>
+  <% if ((@good_answers.count.to_f / @quizz_questions.count) * 100).round == 100 %>
+    <div class="quizz-cards-index done">
+  <% else %>
+    <div class="quizz-cards-index">
+  <% end %>
+    <div class="progress-container-quizz">
+      <div class="progress-bar-full" style ="width: 25%">
+        <div class="master-progress" style="width: 0%", data-good="<%= @good_answers.count %>", data-all="<%= @quizz_questions.count %>" ></div>
+      </div>
+      <p><%= ((@good_answers.count.to_f / @quizz_questions.count) * 100).round  %>%</p>
   </div>
 
     <div class="quizz-cards-content">
