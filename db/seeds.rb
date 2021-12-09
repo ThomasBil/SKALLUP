@@ -25,18 +25,22 @@ puts "Destroy Questions"
 
 puts "launch seed"
 
-family = Family.new(name: "Carrelage")
 
-file = URI.open('https://m1.lmcdn.fr/media/1/5ae4f1ce475ea7334dce9745/.jpg?width=750&height=750&format=jpg&quality=80&fit=bounds')
-family.photo.attach(io: file, filename: 'carrelage.png', content_type: 'image/png')
-family.save!
-puts "family 1 done"
 family2 = Family.new(name: "Parquet")
 
 file = URI.open('https://images.unsplash.com/photo-1508920052992-6f5a921eba78?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80')
 family2.photo.attach(io: file, filename: 'parquet.png', content_type: 'image/png')
 family2.save!
 puts "family 2 done"
+
+family = Family.new(name: "Carrelage")
+
+file = URI.open('https://m1.lmcdn.fr/media/1/5ae4f1ce475ea7334dce9745/.jpg?width=750&height=750&format=jpg&quality=80&fit=bounds')
+family.photo.attach(io: file, filename: 'carrelage.png', content_type: 'image/png')
+family.save!
+puts "family 1 done"
+
+
 
 family3 = Family.new(name: "Stratifié")
 
@@ -183,13 +187,21 @@ thomas = User.create(email: "thomas@lewagon.fr", password: "azerty", username: "
 puts "User done"
 
 
-Question.create(content: "Est-ce que pour poser du carrelage, il faut du carrelage ?", correct_answer: true, family: family)
-Question.create(content: "Est-ce que pour poser du parquet, il faut du parquet ?", correct_answer: true, family: family)
-Question.create(content: "Est-ce que pour peindre, il faut de la peinture ?", correct_answer: true, family: family)
+Question.create(content: "Le carrelage est il un revêtement de sol robuste ?", correct_answer: true, family: family2)
+Question.create(content: "Le sol stratifié est un revêtement de sol composé d'un support de fibres de bois et d'un décor imprimé ?", correct_answer: true, family: family2)
+Question.create(content: "La simplicité de pose du sol PVC le rend accessible aux bricoleurs débutants ?", correct_answer: true, family: family2)
+Question.create(content: "Les dalles et lames adhésives se posent sur un sol lisse ?", correct_answer: true, family: family2)
+Question.create(content: "Les dalles et lames à clipser sont prévues pour les sols irréguliers ?", correct_answer: true, family: family2)
+Question.create(content: "Les dalles et lames autoplombantes peuvent se poser directement sur un carrelage ?", correct_answer: true, family: family2)
 
-Question.create(content: "Est-ce que pour poser du carrelage, il faut du carrelage ?", correct_answer: true, family: family2)
-Question.create(content: "Est-ce que pour poser du parquet, il faut du parquet ?", correct_answer: true, family: family2)
-Question.create(content: "Est-ce que pour peindre, il faut de la peinture ?", correct_answer: true, family: family2)
+Question.create(content: "Est-ce qu'un parquet à lame large permet-il d'agrandir la pièce ?", correct_answer: true, family: family)
+Question.create(content: "Le parquet vitrifié a t-il un aspect brillant ?", correct_answer: true, family: family)
+Question.create(content: "Le parquet ciré est il plus dur d'entretien a t-il un aspect brillant ?", correct_answer: true, family: family)
+Question.create(content: "Les parquets destinés aux habitations sont classés sur 3 niveaux ?", correct_answer: true, family: family)
+Question.create(content: "Les essences de bois adaptées pour la salle de bain sont le chêne, le teck, le robinier et les bois thermotraités ?", correct_answer: true, family: family)
+Question.create(content: "Le parquet est compatible avec un sol chauffant, ou même chauffant-rafraîchissant ? ", correct_answer: true, family: family)
+Question.create(content: "Si votre support est un ancien carrelage, faut-il choisir un parquet de faible épaisseur (12 ou 14 mm)", correct_answer: true, family: family)
+
 
 Question.create(content: "Est-ce que pour poser du carrelage, il faut du carrelage ?", correct_answer: true, family: family3)
 Question.create(content: "Est-ce que pour poser du parquet, il faut du parquet ?", correct_answer: true, family: family3)
