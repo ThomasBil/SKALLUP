@@ -19,7 +19,7 @@
   font-weight: bold;
   font-family: "Work Sans", "Helvetica", "sans-serif";
   position: absolute;
-  right: 720px;
+  right: 494px;
   bottom: 55px;
   p {
     font-weight: lighter;
@@ -105,7 +105,7 @@
   background-color: white;
   border-radius: 10px;
   width: 230px;
-  height: 425px;
+  height: 340px;
   border-radius: 10px;
   top: 105px;
   left: -5px;
@@ -130,6 +130,8 @@
 .user img {
   border-radius: 50%;
   width: 50px;
+  position: absolute;
+  left: 20px;
 }
 
 .link-nav {
@@ -157,6 +159,9 @@
   }
 }
 
+#espace {
+  margin-bottom: 40px;
+}
 
 .nav-unroll {
   width: 175px;
@@ -186,8 +191,4 @@
     text-decoration: none;
     color: #7B88F3;
   }
-}
-
-#last-li {
-  margin-bottom: 20px;
 }
