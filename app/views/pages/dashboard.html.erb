@@ -103,6 +103,7 @@
     <div class="swiper-wrapper">
     <% @quizzes.each do |family| %>
       <div class="swiper-slide">
+        <%= link_to courses_path  do %>
         <%= cl_image_tag family.photo.key %>
         <div class="contenu-slide-swiper", style="padding: 20px;">
           <div class="contenu-relatif">
@@ -131,6 +132,7 @@
 
         </div>
       </div>
+      <% end %>
     <% end %>
     </div>
     <%# <div class="swiper-button-next"></div>
