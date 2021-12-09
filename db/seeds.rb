@@ -138,7 +138,7 @@ family: family5)
   content:"un cours",
   family: family6)
 
-  file = URI.open('https://images.unsplash.com/photo-1452860606245-08befc0ff44b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZGl5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60')
+  file = URI.open('https://frizbizovh.s3.amazonaws.com/system/ckeditor/pictures/data/000/000/130/content/pose_de_carrelage_sur_parquet.jpg')
   course.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
   course.save!
 
