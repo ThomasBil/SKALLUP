@@ -11,7 +11,7 @@ import 'swiper/modules/navigation/navigation.min.css';
 const initSwiper = () => {
   if (document.querySelector(".mySwiper")) {
 
-    Swiper.use([Navigation, Autoplay]);
+    Swiper.use([Navigation, Autoplay, Pagination]);
 
     const swiper = new Swiper(".mySwiper", {
       slidesPerView: 3,
@@ -29,6 +29,10 @@ const initSwiper = () => {
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
       },
     });
   }

@@ -13,7 +13,12 @@
 
 <div class="cards">
   <% @courses.each do |course| %>
-      <div class = "card-product">
+    <div class = "card-product">
+      <% unless course.progresses.empty? %>
+          <i class="fas fa-check-circle"></i>
+      <% else %>
+        <i class="fas fa-check-circle hidden"></i>
+      <% end %>
         <%= cl_image_tag course.photo.key, height: 300, width: 400, crop: :fill %>
         <div class="card-product-infos">
           <h2><%= course.title %></h2>
