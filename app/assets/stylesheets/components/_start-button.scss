@@ -1,6 +1,17 @@
 .start-button {
-  padding: 5px 30px;
-  background: rgb(55,75,221);
-  background: linear-gradient(180deg, rgba(55,75,221,1) 0%, rgba(122,110,226,1) 100%);
+  padding: 0px 30px;
+  background: #374bdd;
   border-radius: 9px;
+}
+
+
+.quizz-cards-index .start-button a {
+    color: white;
+    margin: 0;
+    font-size: 25px;
+    text-decoration: none;
+    &:hover {
+      color: whitesmoke;
+      text-decoration: none;
+  }
 }

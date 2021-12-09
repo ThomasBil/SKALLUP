@@ -6,6 +6,8 @@
   margin: 150px auto;
   padding: 25px 50px;
   position: relative;
+  margin-top: 50px;
+  background-color: white;
   h2 {
     width: fit-content;
     margin: 0 auto ;
@@ -32,5 +34,33 @@
     margin: 0;
     font-size: 38px;
     text-decoration: none;
+    color: white;
+    &:hover{
+      color: rgb(156, 156, 156);
+    }
   }
+}
+
+.button-filter-v {
+  background: rgb(34, 204, 57);
+  // background: linear-gradient(180deg, rgba(55,75,221,1) 0%, rgba(122,110,226,1) 100%);
+  color: white;
+  font-weight: bold;
+  padding: 2px 40px;
+}
+
+.button-filter-r {
+  background: rgb(226, 17, 17);
+  // background: linear-gradient(180deg, rgba(55,75,221,1) 0%, rgba(122,110,226,1) 100%);
+  color: white;
+  font-weight: bold;
+  padding: 2px 40px;
+}
+
+#ajust {
+  margin-top: 40px;
+}
+
+.progress-bar-full {
+  margin-top: 30px;
 }
