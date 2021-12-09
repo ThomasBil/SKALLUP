@@ -11,6 +11,7 @@ class CoursesController < ApplicationController
       @courses = Course.all
     end
     @courses = @courses.reverse
+    @families = Family.all
   end
 
   def show
