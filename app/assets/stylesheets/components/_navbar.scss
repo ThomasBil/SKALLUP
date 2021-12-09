@@ -30,9 +30,6 @@
     font-weight: bold;
     font-family: 'Open Sans', sans-serif;
     text-decoration: none;
-    &:hover {
-      color: #7B88F3;
-    }
   }
 }
 
@@ -46,10 +43,16 @@
   left: 40px;
   top: 28px;
   font-family: 'Open Sans', sans-serif;
+}
+
+.skallup a {
+  color: white;
   &:hover {
-    color: #7B88F3
+    text-decoration: underline;
+    color: white;
   }
 }
+
 
 
 .search-form-control {
