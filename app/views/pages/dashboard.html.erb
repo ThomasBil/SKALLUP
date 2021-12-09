@@ -103,7 +103,7 @@
     <div class="swiper-wrapper">
     <% @quizzes.each do |family| %>
       <div class="swiper-slide">
-        <img src="https://images.unsplash.com/photo-1623043453741-11aef9cb59b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZG8lMjBpdCUyMHlvdXJzZWxmfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+        <%= cl_image_tag family.photo.key %>
         <div class="contenu-slide-swiper", style="padding: 20px;">
           <div class="contenu-relatif">
 

@@ -25,14 +25,46 @@ puts "Destroy Questions"
 
 puts "launch seed"
 
-family = Family.create!(name: "Carrelage")
-family2 = Family.create(name: "Parquet")
-family3 = Family.create(name: "Stratifié")
-family4 = Family.create(name: "Plancher")
-family5 = Family.create(name: "Sol souple")
-family6 = Family.create(name: "Revêtement extérieur")
+family = Family.new(name: "Carrelage")
 
-puts "family done"
+file = URI.open('https://m1.lmcdn.fr/media/1/5ae4f1ce475ea7334dce9745/.jpg?width=750&height=750&format=jpg&quality=80&fit=bounds')
+family.photo.attach(io: file, filename: 'carrelage.png', content_type: 'image/png')
+family.save!
+puts "family 1 done"
+family2 = Family.new(name: "Parquet")
+
+file = URI.open('https://images.unsplash.com/photo-1508920052992-6f5a921eba78?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80')
+family2.photo.attach(io: file, filename: 'parquet.png', content_type: 'image/png')
+family2.save!
+puts "family 2 done"
+
+family3 = Family.new(name: "Stratifié")
+
+file = URI.open('https://images.unsplash.com/photo-1594125674956-61a9b49c8ecc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80')
+family3.photo.attach(io: file, filename: 'stratifie.png', content_type: 'image/png')
+family3.save!
+puts "family 3 done"
+
+family4 = Family.new(name: "Plancher")
+
+file = URI.open('https://www.ecohabitation.com/media/articles/images/cf/02/cf0275214177cf66b303fa504869ffb058b28a23/thumbs/b-NIJDP2XmC3_1200x500_Q9YtDUVi.jpg')
+family4.photo.attach(io: file, filename: 'plancher.png', content_type: 'image/png')
+family4.save!
+puts "family 4 done"
+family5 = Family.new(name: "Sol souple")
+
+file = URI.open('https://blog.izi-by-edf.fr/2021/02/iStock-1272661345-1024x687.jpg')
+family5.photo.attach(io: file, filename: 'lino.png', content_type: 'image/png')
+family5.save!
+puts "family 5 done"
+family6 = Family.new(name: "Revêtement extérieur")
+
+file = URI.open('https://permeasol.fr/wp-content/uploads/2019/06/orange-provencale.jpg')
+family6.photo.attach(io: file, filename: 'exterieur.png', content_type: 'image/png')
+family6.save!
+
+puts "familys done"
+
 course = Course.new(
   title: "Carrelage sol et mur",
   difficulty: "Difficile",
