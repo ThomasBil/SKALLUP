@@ -7,6 +7,7 @@ const initButton = () => {
       setTimeout(() => {
         castor.style.display = "block";
         castor.style.opacity = "1";
+        button.style.display = "none";
       }, 350);
     });
   };
