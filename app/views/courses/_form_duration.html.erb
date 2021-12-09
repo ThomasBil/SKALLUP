@@ -1,6 +1,6 @@
 <div class="filtre-text">
   Les cours sur le
-    <button class="btn btn-secondary dropdown-toggle filter" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+    <button class="btn dropdown-toggle filter" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
       <% if params[:family].present? %>
            <%= params[:family] %>
         <% else %>
@@ -18,7 +18,7 @@
   <div>
     <div class="dropdown-filter">
       <span class="filtre-text">Votre niveau</span>
-      <button class="btn btn-secondary dropdown-toggle filter" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+      <button class="btn dropdown-toggle filter" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
         <% if params[:difficulty].present? %>
            <%= params[:difficulty] %>
         <% else %>
@@ -36,7 +36,7 @@
   <div>
     <div class="dropdown-filter">
     <span class="filtre-text">Choisissez votre durée</span>
-      <button class="btn btn-secondary dropdown-toggle filter" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+      <button class="btn dropdown-toggle filter" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
         <% if params[:duration].present? %>
            <%= params[:duration] %>
         <% else %>
