@@ -12,12 +12,9 @@
 .titre {
   margin-top: 20px;
   color: white;
-  font-weight: bold;
-  font-family: "Work Sans", "Helvetica", "sans-serif";
+  font-family: 'Open Sans', sans-serif;
   margin-top: 20px;
   color: white;
-  font-weight: bold;
-  font-family: "Work Sans", "Helvetica", "sans-serif";
   position: absolute;
   right: 720px;
   bottom: 55px;
@@ -31,7 +28,7 @@
   a {
     color: white;
     font-weight: bold;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     text-decoration: none;
     &:hover {
       color: #7B88F3;
@@ -48,7 +45,7 @@
   position: absolute;
   left: 40px;
   top: 28px;
-  font-family: "Work Sans", "Helvetica", "sans-serif";
+  font-family: 'Open Sans', sans-serif;
   &:hover {
     color: #7B88F3
   }

@@ -25,52 +25,51 @@
 
 
 .button-finish {
-  background-color: #3546DE;
   width: fit-content;
-  padding: 15px 250px;
-  margin: 20px auto;
+  padding: 15px 60px;
+  margin: 50px auto;
   opacity: 1;
   transition: opacity 0.3s ease-in;
   a {
-    color: white;
+    color: #3546DE;
     text-decoration: none;
     font-size: 22px;
     &:hover {
-      color: #737ee0;
+      color: #1e2774;
     }
   }
 }
 
 
 .duo-buttons {
-  margin-top: 40px;
-  padding: 0 100px;
+  margin-top: 70px;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 80px;
 }
 
 
 .button-next-finish {
-  background-color: #3546DE;
-  width: fit-content;
+  background-color: none;
   padding: 15px 50px;
+  color: #3546DE;
   a {
-    color: white;
+    color: #3546DE;
     text-decoration: none;
     font-size: 22px;
     &:hover {
-      color: #737ee0;
+      color: #1e2774;
     }
   }
 }
 
 .fas.fa-chevron-right {
-  color: white;
+  color: 3546DE;
   margin-left: 20px;
   font-size: 20px;
 }
 .fas.fa-chevron-left {
-  color: white;
+  color: 3546DE;
   margin-right: 20px;
   font-size: 20px;
 }
