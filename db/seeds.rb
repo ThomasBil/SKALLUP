@@ -98,7 +98,7 @@ course = Course.new(
   )
   family
 
-  course.family = family
+  course.family = family4
 
   file = URI.open('https://images.unsplash.com/photo-1611506420749-9cbb8e5a1057?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80')
 
@@ -129,7 +129,7 @@ family: family2)
     Notre animateur vous fait partager son expertise, pas à pas. Vous êtes totalement débutant en bricolage ? Ça tombe bien !
     Nous sommes là pour vous aider à dire : C’EST MOI QUI L’AI FAIT ! Venez apprendre comment poser du carrelage au sol avec un expert !
     A l'issue de ce cours, vous serez capable de choisir votre carrelage et le mortier colle adapté, préparer le sol avant la pose, découper, poser et coller vos carreaux de carrelage avant de faire les joints.",
-family: family3)
+family: family6)
 
   file = URI.open('https://images.unsplash.com/photo-1617850687395-620757feb1f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8dGVycmFjZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60')
   course.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
@@ -143,7 +143,7 @@ family: family3)
     Notre animateur vous fait partager son expertise, pas à pas. Vous êtes totalement débutant en bricolage ? Ça tombe bien !
     Nous sommes là pour vous aider à dire : C’EST MOI QUI L’AI FAIT ! Venez apprendre comment poser du carrelage au sol avec un expert !
     A l'issue de ce cours, vous serez capable de choisir votre carrelage et le mortier colle adapté, préparer le sol avant la pose, découper, poser et coller vos carreaux de carrelage avant de faire les joints.",
-family: family4)
+family: family3)
 
   file = URI.open('https://images.unsplash.com/photo-1575204015311-0fe377370780?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bGFtaW5hdGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60')
   course.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
@@ -172,7 +172,7 @@ family: family5)
   difficulty: "Débutant",
   duration: "30",
   content:"un cours",
-  family: family6)
+  family: family2)
 
   file = URI.open('https://frizbizovh.s3.amazonaws.com/system/ckeditor/pictures/data/000/000/130/content/pose_de_carrelage_sur_parquet.jpg')
   course.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
