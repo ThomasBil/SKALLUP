@@ -187,20 +187,20 @@ thomas = User.create(email: "thomas@lewagon.fr", password: "azerty", username: "
 puts "User done"
 
 
-Question.create(content: "Le carrelage est il un revêtement de sol robuste ?", correct_answer: true, family: family2)
-Question.create(content: "Le sol stratifié est un revêtement de sol composé d'un support de fibres de bois et d'un décor imprimé ?", correct_answer: true, family: family2)
-Question.create(content: "La simplicité de pose du sol PVC le rend accessible aux bricoleurs débutants ?", correct_answer: true, family: family2)
-Question.create(content: "Les dalles et lames adhésives se posent sur un sol lisse ?", correct_answer: true, family: family2)
-Question.create(content: "Les dalles et lames à clipser sont prévues pour les sols irréguliers ?", correct_answer: true, family: family2)
-Question.create(content: "Les dalles et lames autoplombantes peuvent se poser directement sur un carrelage ?", correct_answer: true, family: family2)
+Question.create(content: "Le carrelage est il un revêtement de sol robuste ?", correct_answer: true, family: family)
+Question.create(content: "Le sol stratifié est un revêtement de sol composé d'un support de fibres de bois et d'un décor imprimé ?", correct_answer: true, family: family)
+Question.create(content: "La simplicité de pose du sol PVC le rend accessible aux bricoleurs débutants ?", correct_answer: true, family: family)
+Question.create(content: "Les dalles et lames adhésives se posent sur un sol lisse ?", correct_answer: true, family: family)
+Question.create(content: "Les dalles et lames à clipser sont prévues pour les sols irréguliers ?", correct_answer: true, family: family)
+Question.create(content: "Les dalles et lames autoplombantes peuvent se poser directement sur un carrelage ?", correct_answer: true, family: family)
 
-Question.create(content: "Est-ce qu'un parquet à lame large permet-il d'agrandir la pièce ?", correct_answer: true, family: family)
-Question.create(content: "Le parquet vitrifié a t-il un aspect brillant ?", correct_answer: true, family: family)
-Question.create(content: "Le parquet ciré est il plus dur d'entretien a t-il un aspect brillant ?", correct_answer: true, family: family)
-Question.create(content: "Les parquets destinés aux habitations sont classés sur 3 niveaux ?", correct_answer: true, family: family)
-Question.create(content: "Les essences de bois adaptées pour la salle de bain sont le chêne, le teck, le robinier et les bois thermotraités ?", correct_answer: true, family: family)
-Question.create(content: "Le parquet est compatible avec un sol chauffant, ou même chauffant-rafraîchissant ? ", correct_answer: true, family: family)
-Question.create(content: "Si votre support est un ancien carrelage, faut-il choisir un parquet de faible épaisseur (12 ou 14 mm)", correct_answer: true, family: family)
+Question.create(content: "Est-ce qu'un parquet à lame large permet-il d'agrandir la pièce ?", correct_answer: true, family: family2)
+Question.create(content: "Le parquet vitrifié a t-il un aspect brillant ?", correct_answer: true, family: family2)
+Question.create(content: "Le parquet ciré est il plus dur d'entretien a t-il un aspect brillant ?", correct_answer: true, family: family2)
+Question.create(content: "Les parquets destinés aux habitations sont classés sur 3 niveaux ?", correct_answer: true, family: family2)
+Question.create(content: "Les essences de bois adaptées pour la salle de bain sont le chêne, le teck, le robinier et les bois thermotraités ?", correct_answer: true, family: family2)
+Question.create(content: "Le parquet est compatible avec un sol chauffant, ou même chauffant-rafraîchissant ? ", correct_answer: true, family: family2)
+Question.create(content: "Si votre support est un ancien carrelage, faut-il choisir un parquet de faible épaisseur (12 ou 14 mm)", correct_answer: true, family: family2)
 
 
 Question.create(content: "Est-ce que pour poser du carrelage, il faut du carrelage ?", correct_answer: true, family: family3)
