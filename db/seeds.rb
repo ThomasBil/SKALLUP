@@ -122,6 +122,21 @@ family: family2)
 
 
   course = Course.new(
+  title: "Poser du parquet",
+  difficulty: "Débutant",
+  duration: "30",
+  content: "Comment se déroule ce cours ?
+    Notre animateur vous fait partager son expertise, pas à pas. Vous êtes totalement débutant en bricolage ? Ça tombe bien !
+    Nous sommes là pour vous aider à dire : C’EST MOI QUI L’AI FAIT ! Venez apprendre comment poser du carrelage au sol avec un expert !
+    A l'issue de ce cours, vous serez capable de choisir votre carrelage et le mortier colle adapté, préparer le sol avant la pose, découper, poser et coller vos carreaux de carrelage avant de faire les joints.",
+family: family2)
+
+  file = URI.open('https://media.adeo.com/marketplace/69551874/d807c695-ec6d-4c23-b668-6ef84a00e786.jpeg?width=650&height=650&format=jpg&quality=80&fit=bounds')
+  course.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+  course.save!
+
+
+  course = Course.new(
   title: "Terrasse et sol extérieur",
   difficulty: "Débutant",
   duration: "30",
